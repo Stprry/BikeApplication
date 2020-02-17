@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class LoginViewController: UIViewController {
 
@@ -33,17 +34,32 @@ class LoginViewController: UIViewController {
         Utilities.styleTextField(PasswordFeild)
         Utilities.styleHollowButton(LoginBtn)
     }
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     @IBAction func LoginTap(_ sender: Any) {
+        // validate feilds still to impliment
         
+        
+        //if all feilds valid do below
+        let email = EmailFeild.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let password = PasswordFeild.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        // sign in user
+        Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
+            if error != nil{
+                // sign in error
+                self.ErrorMsg.text = error!.localizedDescription
+                self.ErrorMsg.alpha = 1
+            }else{
+                // go to home screen
+                self.transitionHome()
+            }
+        }
+    }
+    func transitionHome(){
+        let homeViewController =
+        storyboard?.instantiateViewController(identifier: Constants.Storyboards.homeViewContrl) as? HomeViewController
+        view.window?.rootViewController = homeViewController
+        view.window?.makeKeyAndVisible()
     }
     
 }
