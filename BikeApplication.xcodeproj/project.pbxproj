@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14F03E004809D3942109E877 /* Pods_BikeApplication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAFA7C7E069479AF30063EAD /* Pods_BikeApplication.framework */; };
 		7B292F0023FAFFDD00E656B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B292EFF23FAFFDD00E656B1 /* AppDelegate.swift */; };
 		7B292F0223FAFFDD00E656B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B292F0123FAFFDD00E656B1 /* SceneDelegate.swift */; };
 		7B292F0423FAFFDD00E656B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B292F0323FAFFDD00E656B1 /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 		7B292F1923FB015A00E656B1 /* ReigsterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B292F1823FB015A00E656B1 /* ReigsterViewController.swift */; };
 		7B292F1B23FB016900E656B1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B292F1A23FB016900E656B1 /* LoginViewController.swift */; };
 		7B292F1E23FB181400E656B1 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B292F1D23FB181400E656B1 /* Utilities.swift */; };
+		7B292F2423FB3EB300E656B1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7B292F2323FB3EB300E656B1 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,10 @@
 		7B292F1823FB015A00E656B1 /* ReigsterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReigsterViewController.swift; sourceTree = "<group>"; };
 		7B292F1A23FB016900E656B1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7B292F1D23FB181400E656B1 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		7B292F2323FB3EB300E656B1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E65A0004AD12C9F2EF6FC687 /* Pods-BikeApplication.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BikeApplication.debug.xcconfig"; path = "Target Support Files/Pods-BikeApplication/Pods-BikeApplication.debug.xcconfig"; sourceTree = "<group>"; };
+		E66169277682EBD1B55364D4 /* Pods-BikeApplication.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BikeApplication.release.xcconfig"; path = "Target Support Files/Pods-BikeApplication/Pods-BikeApplication.release.xcconfig"; sourceTree = "<group>"; };
+		EAFA7C7E069479AF30063EAD /* Pods_BikeApplication.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BikeApplication.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,17 +47,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14F03E004809D3942109E877 /* Pods_BikeApplication.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		497ED9A95A7BCE554FB4B750 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EAFA7C7E069479AF30063EAD /* Pods_BikeApplication.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7B292EF323FAFFDD00E656B1 = {
 			isa = PBXGroup;
 			children = (
 				7B292EFE23FAFFDD00E656B1 /* BikeApplication */,
 				7B292EFD23FAFFDD00E656B1 /* Products */,
+				E10AD855C54955DD73EF817D /* Pods */,
+				497ED9A95A7BCE554FB4B750 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,6 +91,7 @@
 				7B292F0A23FAFFE000E656B1 /* LaunchScreen.storyboard */,
 				7B292F0823FAFFE000E656B1 /* Assets.xcassets */,
 				7B292F0D23FAFFE000E656B1 /* Info.plist */,
+				7B292F2323FB3EB300E656B1 /* GoogleService-Info.plist */,
 			);
 			path = BikeApplication;
 			sourceTree = "<group>";
@@ -98,6 +116,15 @@
 			path = Utility;
 			sourceTree = "<group>";
 		};
+		E10AD855C54955DD73EF817D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E65A0004AD12C9F2EF6FC687 /* Pods-BikeApplication.debug.xcconfig */,
+				E66169277682EBD1B55364D4 /* Pods-BikeApplication.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -105,9 +132,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7B292F1023FAFFE000E656B1 /* Build configuration list for PBXNativeTarget "BikeApplication" */;
 			buildPhases = (
+				5EB1B58C577AA6C3B9FD8C30 /* [CP] Check Pods Manifest.lock */,
 				7B292EF823FAFFDD00E656B1 /* Sources */,
 				7B292EF923FAFFDD00E656B1 /* Frameworks */,
 				7B292EFA23FAFFDD00E656B1 /* Resources */,
+				CA2F91D8853122F77317119A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -157,12 +186,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B292F0C23FAFFE000E656B1 /* LaunchScreen.storyboard in Resources */,
+				7B292F2423FB3EB300E656B1 /* GoogleService-Info.plist in Resources */,
 				7B292F0923FAFFE000E656B1 /* Assets.xcassets in Resources */,
 				7B292F0723FAFFDD00E656B1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5EB1B58C577AA6C3B9FD8C30 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BikeApplication-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA2F91D8853122F77317119A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BikeApplication/Pods-BikeApplication-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BikeApplication/Pods-BikeApplication-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BikeApplication/Pods-BikeApplication-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7B292EF823FAFFDD00E656B1 /* Sources */ = {
@@ -318,6 +390,7 @@
 		};
 		7B292F1123FAFFE000E656B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E65A0004AD12C9F2EF6FC687 /* Pods-BikeApplication.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -336,6 +409,7 @@
 		};
 		7B292F1223FAFFE000E656B1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E66169277682EBD1B55364D4 /* Pods-BikeApplication.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

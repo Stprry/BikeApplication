@@ -22,7 +22,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="30"/>
                                         <state key="normal" title="SignUp"/>
                                         <connections>
-                                            <segue destination="Tgn-ZE-QZJ" kind="show" id="NK8-aO-lEF"/>
+                                            <segue destination="Tgn-ZE-QZJ" kind="show" id="TWu-Ym-BbU"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gpc-qj-0h1">
@@ -30,6 +30,7 @@
                                         <size key="titleShadowOffset" width="0.0" height="40"/>
                                         <state key="normal" title="LogIn"/>
                                         <connections>
+                                            <action selector="LoginBtnTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xfD-dH-YK3"/>
                                             <segue destination="OgF-Se-dmw" kind="show" id="b4A-VI-ufn"/>
                                         </connections>
                                     </button>
@@ -48,6 +49,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="d8l-HB-ySg"/>
+                    <connections>
+                        <outlet property="LoginBtn" destination="Gpc-qj-0h1" id="4C3-hl-BL5"/>
+                        <outlet property="RegisterBtn" destination="3zP-Q6-qTX" id="RxX-Qr-iKs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
