@@ -13,10 +13,14 @@ import Firebase
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
  var window: UIWindow?
-
+    let barButtonAppereance = UIBarButtonItem.appearance()
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
+        
+        let backButton = UIImage(named: "back")// declare image
+        let backButtonImage = backButton?.stretchableImage(withLeftCapWidth: 0, topCapHeight: 10)// modify image
+        barButtonAppereance.setBackButtonBackgroundImage(backButtonImage, for: .normal, barMetrics: .default)// change button appearance
         return true
     }
 
