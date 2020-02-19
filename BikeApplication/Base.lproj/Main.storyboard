@@ -67,7 +67,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="RdW-uQ-GK8">
-                                <rect key="frame" x="40" y="84" width="334" height="200.5"/>
+                                <rect key="frame" x="40" y="84" width="334" height="190.5"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yOE-8A-QpC">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="40"/>
@@ -82,22 +82,21 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iSn-U7-JM0">
-                                        <rect key="frame" x="0.0" y="120" width="334" height="40"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xyM-L3-383">
+                                        <rect key="frame" x="0.0" y="120" width="334" height="30"/>
                                         <state key="normal" title="Login"/>
                                         <connections>
-                                            <action selector="LoginTap:" destination="OgF-Se-dmw" eventType="touchUpInside" id="f0p-we-cIl"/>
+                                            <action selector="LoginButtonTapped:" destination="OgF-Se-dmw" eventType="touchUpInside" id="XQF-SE-axt"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Err Msg" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="btw-te-nau">
-                                        <rect key="frame" x="0.0" y="180" width="334" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="170" width="334" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="iSn-U7-JM0" firstAttribute="height" secondItem="yOE-8A-QpC" secondAttribute="height" id="bHf-9b-dCl"/>
                                     <constraint firstItem="F9c-rJ-Pdg" firstAttribute="height" secondItem="yOE-8A-QpC" secondAttribute="height" id="xas-Ui-u4o"/>
                                 </constraints>
                             </stackView>
@@ -114,7 +113,7 @@
                     <connections>
                         <outlet property="EmailFeild" destination="yOE-8A-QpC" id="IIt-8i-iKR"/>
                         <outlet property="ErrorMsg" destination="btw-te-nau" id="n2M-u4-NbW"/>
-                        <outlet property="LoginBtn" destination="iSn-U7-JM0" id="v2J-4r-Nv6"/>
+                        <outlet property="LoginButton" destination="xyM-L3-383" id="0VE-nJ-VtC"/>
                         <outlet property="PasswordFeild" destination="F9c-rJ-Pdg" id="8XC-cc-A8X"/>
                     </connections>
                 </viewController>
