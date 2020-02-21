@@ -22,7 +22,10 @@
 		7B292F2423FB3EB300E656B1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7B292F2323FB3EB300E656B1 /* GoogleService-Info.plist */; };
 		7B292F2623FB549300E656B1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B292F2523FB549300E656B1 /* Constants.swift */; };
 		7B292F2923FB5A0700E656B1 /* bike.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7B292F2823FB5A0600E656B1 /* bike.mp4 */; };
-		7B292F2B23FF596B00E656B1 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B292F2A23FF596B00E656B1 /* Home.storyboard */; };
+		7B292F2D23FF6AB300E656B1 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B292F2C23FF6AB300E656B1 /* MapViewController.swift */; };
+		7B292F2F23FF6B0D00E656B1 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B292F2E23FF6B0D00E656B1 /* SearchViewController.swift */; };
+		7B292F3123FF6F3200E656B1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B292F3023FF6F3200E656B1 /* SettingsViewController.swift */; };
+		7B292F35240010B900E656B1 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B292F34240010B900E656B1 /* MainTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,7 +45,10 @@
 		7B292F2323FB3EB300E656B1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7B292F2523FB549300E656B1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7B292F2823FB5A0600E656B1 /* bike.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = bike.mp4; sourceTree = "<group>"; };
-		7B292F2A23FF596B00E656B1 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		7B292F2C23FF6AB300E656B1 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		7B292F2E23FF6B0D00E656B1 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		7B292F3023FF6F3200E656B1 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		7B292F34240010B900E656B1 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		E65A0004AD12C9F2EF6FC687 /* Pods-BikeApplication.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BikeApplication.debug.xcconfig"; path = "Target Support Files/Pods-BikeApplication/Pods-BikeApplication.debug.xcconfig"; sourceTree = "<group>"; };
 		E66169277682EBD1B55364D4 /* Pods-BikeApplication.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BikeApplication.release.xcconfig"; path = "Target Support Files/Pods-BikeApplication/Pods-BikeApplication.release.xcconfig"; sourceTree = "<group>"; };
 		EAFA7C7E069479AF30063EAD /* Pods_BikeApplication.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BikeApplication.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,7 +104,6 @@
 				7B292F0A23FAFFE000E656B1 /* LaunchScreen.storyboard */,
 				7B292F0D23FAFFE000E656B1 /* Info.plist */,
 				7B292F2323FB3EB300E656B1 /* GoogleService-Info.plist */,
-				7B292F2A23FF596B00E656B1 /* Home.storyboard */,
 			);
 			path = BikeApplication;
 			sourceTree = "<group>";
@@ -112,6 +117,10 @@
 				7B292F1623FB015000E656B1 /* HomeViewController.swift */,
 				7B292F1823FB015A00E656B1 /* ReigsterViewController.swift */,
 				7B292F1A23FB016900E656B1 /* LoginViewController.swift */,
+				7B292F2C23FF6AB300E656B1 /* MapViewController.swift */,
+				7B292F2E23FF6B0D00E656B1 /* SearchViewController.swift */,
+				7B292F3023FF6F3200E656B1 /* SettingsViewController.swift */,
+				7B292F34240010B900E656B1 /* MainTabBarController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -205,7 +214,6 @@
 				7B292F0C23FAFFE000E656B1 /* LaunchScreen.storyboard in Resources */,
 				7B292F2423FB3EB300E656B1 /* GoogleService-Info.plist in Resources */,
 				7B292F0923FAFFE000E656B1 /* Assets.xcassets in Resources */,
-				7B292F2B23FF596B00E656B1 /* Home.storyboard in Resources */,
 				7B292F2923FB5A0700E656B1 /* bike.mp4 in Resources */,
 				7B292F0723FAFFDD00E656B1 /* Main.storyboard in Resources */,
 			);
@@ -261,14 +269,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B292F1B23FB016900E656B1 /* LoginViewController.swift in Sources */,
+				7B292F2F23FF6B0D00E656B1 /* SearchViewController.swift in Sources */,
 				7B292F1723FB015000E656B1 /* HomeViewController.swift in Sources */,
 				7B292F1923FB015A00E656B1 /* ReigsterViewController.swift in Sources */,
+				7B292F2D23FF6AB300E656B1 /* MapViewController.swift in Sources */,
 				7B292F0423FAFFDD00E656B1 /* ViewController.swift in Sources */,
 				7B292F0023FAFFDD00E656B1 /* AppDelegate.swift in Sources */,
+				7B292F35240010B900E656B1 /* MainTabBarController.swift in Sources */,
 				7B292F0223FAFFDD00E656B1 /* SceneDelegate.swift in Sources */,
 				7B292F1E23FB181400E656B1 /* Utilities.swift in Sources */,
 				7B292F1423FB011900E656B1 /* SplashViewController.swift in Sources */,
 				7B292F2623FB549300E656B1 /* Constants.swift in Sources */,
+				7B292F3123FF6F3200E656B1 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

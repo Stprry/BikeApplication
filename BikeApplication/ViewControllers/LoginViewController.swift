@@ -60,10 +60,21 @@ class LoginViewController: UIViewController {
     }
     
     func transitionHome(){
-        let homeViewController =
-        storyboard?.instantiateViewController(identifier: Constants.Storyboards.homeViewContrl) as? HomeViewController
-        view.window?.rootViewController = homeViewController
-        view.window?.makeKeyAndVisible()
-    }
     
+     // need to set TabView as inital VC, then Show home page
+        
+        
+    
+        let tabViewController =
+        storyboard?.instantiateViewController(withIdentifier: Constants.Storyboards.tabController) as? MainTabBarController
+        view.window?.rootViewController = tabViewController
+        view.window?.makeKeyAndVisible()
+
+        
+        
+//        let homeViewController =
+//        storyboard?.instantiateViewController(identifier: Constants.Storyboards.homeViewContrl) as? HomeViewController
+//        view.window?.rootViewController = homeViewController
+//        view.window?.makeKeyAndVisible()
+    }
 }

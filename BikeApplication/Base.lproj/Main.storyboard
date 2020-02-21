@@ -200,9 +200,41 @@
             </objects>
             <point key="canvasLocation" x="2721.739130434783" y="-181.47321428571428"/>
         </scene>
-        <!--Home View Controller-->
+        <!--Settings-->
+        <scene sceneID="vtY-LW-LwR">
+            <objects>
+                <viewController storyboardIdentifier="SettingsVC" id="SwK-IA-Lqh" customClass="SettingsViewController" customModule="BikeApplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="gOE-SE-c3P">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Settings" image="gear" catalog="system" selectedImage="gear" id="e6O-fv-H5M"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UPn-0O-Of6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5008" y="-1253"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="pMU-j2-jLZ">
+            <objects>
+                <viewController storyboardIdentifier="SearchVC" id="Pzi-kk-Csx" customClass="SearchViewController" customModule="BikeApplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d5V-d3-M7S">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="dab-BZ-8KW"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" selectedImage="magnifyingglass" id="RSp-G8-LST"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dwK-Y2-mEO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4994" y="-576"/>
+        </scene>
+        <!--Home-->
         <scene sceneID="aEz-Tx-kLw">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vM8-ZG-uJ1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="HomeVC" id="WmL-GR-AEM" customClass="HomeViewController" customModule="BikeApplication" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qUo-cJ-CGW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -217,17 +249,31 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="soC-ui-DpW" firstAttribute="trailing" secondItem="xSP-MN-oes" secondAttribute="trailing" constant="184" id="2wC-OT-2iE"/>
-                            <constraint firstItem="soC-ui-DpW" firstAttribute="bottom" secondItem="xSP-MN-oes" secondAttribute="bottom" constant="427" id="5Mz-nt-7U1"/>
-                            <constraint firstItem="xSP-MN-oes" firstAttribute="top" secondItem="soC-ui-DpW" secondAttribute="top" constant="370" id="eV2-kV-PpQ"/>
-                            <constraint firstItem="xSP-MN-oes" firstAttribute="leading" secondItem="soC-ui-DpW" secondAttribute="leading" constant="184" id="tmW-Rc-Lzl"/>
+                            <constraint firstItem="xSP-MN-oes" firstAttribute="centerX" secondItem="qUo-cJ-CGW" secondAttribute="centerX" id="TvP-LO-i5I"/>
+                            <constraint firstItem="xSP-MN-oes" firstAttribute="top" secondItem="soC-ui-DpW" secondAttribute="top" constant="370" id="ol3-Uc-HoU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="soC-ui-DpW"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" selectedImage="house.fill" id="b5o-YU-iWd"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vM8-ZG-uJ1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4090" y="80"/>
+            <point key="canvasLocation" x="5000" y="79.6875"/>
+        </scene>
+        <!--Ride Map-->
+        <scene sceneID="EVR-3n-Olk">
+            <objects>
+                <viewController storyboardIdentifier="MapVC" id="kWf-d3-hr0" customClass="MapViewController" customModule="BikeApplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xjg-TV-3tK" customClass="MKMapView">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="4pZ-c2-HLz"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Ride Map" image="map.fill" catalog="system" selectedImage="map.fill" id="iE5-ct-9zb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qao-xn-9aQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4999" y="809"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0Cw-pz-MLM">
@@ -287,5 +333,31 @@
             </objects>
             <point key="canvasLocation" x="1811.594202898551" y="-181.47321428571428"/>
         </scene>
+        <!--Main Tab Bar Controller-->
+        <scene sceneID="aSm-VZ-jjG">
+            <objects>
+                <tabBarController storyboardIdentifier="TabController" automaticallyAdjustsScrollViewInsets="NO" id="ERT-Lw-agW" customClass="MainTabBarController" customModule="BikeApplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cSD-RP-20C">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="WmL-GR-AEM" kind="relationship" relationship="viewControllers" id="bWe-HP-THI"/>
+                        <segue destination="Pzi-kk-Csx" kind="relationship" relationship="viewControllers" id="uXG-yN-lSp"/>
+                        <segue destination="kWf-d3-hr0" kind="relationship" relationship="viewControllers" id="xHQ-WZ-6gl"/>
+                        <segue destination="SwK-IA-Lqh" kind="relationship" relationship="viewControllers" id="wzd-Cv-76X"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ty5-gZ-KAd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4089.8550724637685" y="79.6875"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="gear" catalog="system" width="64" height="58"/>
+        <image name="house.fill" catalog="system" width="64" height="52"/>
+        <image name="magnifyingglass" catalog="system" width="64" height="56"/>
+        <image name="map.fill" catalog="system" width="64" height="56"/>
+    </resources>
 </document>

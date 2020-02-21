@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         FirebaseApp.configure()
         
+        
         let backButton = UIImage(named: "back")// declare image
         let backButtonImage = backButton?.stretchableImage(withLeftCapWidth: 0, topCapHeight: 10)// modify image
         barButtonAppereance.setBackButtonBackgroundImage(backButtonImage, for: .normal, barMetrics: .default)// change button appearance
