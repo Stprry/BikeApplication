@@ -112,10 +112,11 @@ class ReigsterViewController: UIViewController {
     }
     
     func transitionHome(){
-        let homeViewController =
-        storyboard?.instantiateViewController(identifier: Constants.Storyboards.homeViewContrl) as? HomeViewController
-        view.window?.rootViewController = homeViewController
-        view.window?.makeKeyAndVisible()
+             let tabViewController =
+           storyboard?.instantiateViewController(withIdentifier: Constants.Storyboards.tabController) as? MainTabBarController
+           view.window?.rootViewController = tabViewController
+           view.window?.makeKeyAndVisible()
+
     }
     
 }
