@@ -26,6 +26,12 @@
 		7B292F2F23FF6B0D00E656B1 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B292F2E23FF6B0D00E656B1 /* SearchViewController.swift */; };
 		7B292F3123FF6F3200E656B1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B292F3023FF6F3200E656B1 /* SettingsViewController.swift */; };
 		7B292F35240010B900E656B1 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B292F34240010B900E656B1 /* MainTabBarController.swift */; };
+		7B5112B02406F237003D0EE7 /* RideTrack.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B5112AF2406F237003D0EE7 /* RideTrack.storyboard */; };
+		7B5112B32406F259003D0EE7 /* RideTrack.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7B5112B12406F259003D0EE7 /* RideTrack.xcdatamodeld */; };
+		7B5112B62406F2C1003D0EE7 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5112B52406F2C1003D0EE7 /* CoreDataStack.swift */; };
+		7B5112B92406F33B003D0EE7 /* RideDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5112B82406F33B003D0EE7 /* RideDetailsViewController.swift */; };
+		7B5112BB2406F399003D0EE7 /* NewRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5112BA2406F399003D0EE7 /* NewRideViewController.swift */; };
+		7B5112BD2406F3F0003D0EE7 /* RideHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5112BC2406F3F0003D0EE7 /* RideHomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +55,12 @@
 		7B292F2E23FF6B0D00E656B1 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		7B292F3023FF6F3200E656B1 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		7B292F34240010B900E656B1 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		7B5112AF2406F237003D0EE7 /* RideTrack.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RideTrack.storyboard; sourceTree = "<group>"; };
+		7B5112B22406F259003D0EE7 /* RideTrack.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RideTrack.xcdatamodel; sourceTree = "<group>"; };
+		7B5112B52406F2C1003D0EE7 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		7B5112B82406F33B003D0EE7 /* RideDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideDetailsViewController.swift; sourceTree = "<group>"; };
+		7B5112BA2406F399003D0EE7 /* NewRideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRideViewController.swift; sourceTree = "<group>"; };
+		7B5112BC2406F3F0003D0EE7 /* RideHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideHomeViewController.swift; sourceTree = "<group>"; };
 		E65A0004AD12C9F2EF6FC687 /* Pods-BikeApplication.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BikeApplication.debug.xcconfig"; path = "Target Support Files/Pods-BikeApplication/Pods-BikeApplication.debug.xcconfig"; sourceTree = "<group>"; };
 		E66169277682EBD1B55364D4 /* Pods-BikeApplication.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BikeApplication.release.xcconfig"; path = "Target Support Files/Pods-BikeApplication/Pods-BikeApplication.release.xcconfig"; sourceTree = "<group>"; };
 		EAFA7C7E069479AF30063EAD /* Pods_BikeApplication.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BikeApplication.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				7B292EFE23FAFFDD00E656B1 /* BikeApplication */,
+				7B5112B42406F260003D0EE7 /* CoreData */,
 				7B292EFD23FAFFDD00E656B1 /* Products */,
 				E10AD855C54955DD73EF817D /* Pods */,
 				497ED9A95A7BCE554FB4B750 /* Frameworks */,
@@ -100,10 +113,12 @@
 				7B292F1523FB012200E656B1 /* ViewControllers */,
 				7B292EFF23FAFFDD00E656B1 /* AppDelegate.swift */,
 				7B292F0123FAFFDD00E656B1 /* SceneDelegate.swift */,
-				7B292F0523FAFFDD00E656B1 /* Main.storyboard */,
 				7B292F0A23FAFFE000E656B1 /* LaunchScreen.storyboard */,
+				7B292F0523FAFFDD00E656B1 /* Main.storyboard */,
+				7B5112AF2406F237003D0EE7 /* RideTrack.storyboard */,
 				7B292F0D23FAFFE000E656B1 /* Info.plist */,
 				7B292F2323FB3EB300E656B1 /* GoogleService-Info.plist */,
+				7B292F0823FAFFE000E656B1 /* Assets.xcassets */,
 			);
 			path = BikeApplication;
 			sourceTree = "<group>";
@@ -111,8 +126,8 @@
 		7B292F1523FB012200E656B1 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				7B5112B72406F317003D0EE7 /* RideTrackViewControllers */,
 				7B292F0323FAFFDD00E656B1 /* ViewController.swift */,
-				7B292F0823FAFFE000E656B1 /* Assets.xcassets */,
 				7B292F1323FB011900E656B1 /* SplashViewController.swift */,
 				7B292F1623FB015000E656B1 /* HomeViewController.swift */,
 				7B292F1823FB015A00E656B1 /* ReigsterViewController.swift */,
@@ -140,6 +155,25 @@
 				7B292F2823FB5A0600E656B1 /* bike.mp4 */,
 			);
 			path = Media;
+			sourceTree = "<group>";
+		};
+		7B5112B42406F260003D0EE7 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				7B5112B12406F259003D0EE7 /* RideTrack.xcdatamodeld */,
+				7B5112B52406F2C1003D0EE7 /* CoreDataStack.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		7B5112B72406F317003D0EE7 /* RideTrackViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7B5112B82406F33B003D0EE7 /* RideDetailsViewController.swift */,
+				7B5112BA2406F399003D0EE7 /* NewRideViewController.swift */,
+				7B5112BC2406F3F0003D0EE7 /* RideHomeViewController.swift */,
+			);
+			path = RideTrackViewControllers;
 			sourceTree = "<group>";
 		};
 		E10AD855C54955DD73EF817D /* Pods */ = {
@@ -215,6 +249,7 @@
 				7B292F2423FB3EB300E656B1 /* GoogleService-Info.plist in Resources */,
 				7B292F0923FAFFE000E656B1 /* Assets.xcassets in Resources */,
 				7B292F2923FB5A0700E656B1 /* bike.mp4 in Resources */,
+				7B5112B02406F237003D0EE7 /* RideTrack.storyboard in Resources */,
 				7B292F0723FAFFDD00E656B1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,8 +303,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B5112B62406F2C1003D0EE7 /* CoreDataStack.swift in Sources */,
+				7B5112BB2406F399003D0EE7 /* NewRideViewController.swift in Sources */,
 				7B292F1B23FB016900E656B1 /* LoginViewController.swift in Sources */,
 				7B292F2F23FF6B0D00E656B1 /* SearchViewController.swift in Sources */,
+				7B5112B92406F33B003D0EE7 /* RideDetailsViewController.swift in Sources */,
+				7B5112BD2406F3F0003D0EE7 /* RideHomeViewController.swift in Sources */,
 				7B292F1723FB015000E656B1 /* HomeViewController.swift in Sources */,
 				7B292F1923FB015A00E656B1 /* ReigsterViewController.swift in Sources */,
 				7B292F2D23FF6AB300E656B1 /* MapViewController.swift in Sources */,
@@ -281,6 +320,7 @@
 				7B292F1423FB011900E656B1 /* SplashViewController.swift in Sources */,
 				7B292F2623FB549300E656B1 /* Constants.swift in Sources */,
 				7B292F3123FF6F3200E656B1 /* SettingsViewController.swift in Sources */,
+				7B5112B32406F259003D0EE7 /* RideTrack.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,6 +520,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7B5112B12406F259003D0EE7 /* RideTrack.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7B5112B22406F259003D0EE7 /* RideTrack.xcdatamodel */,
+			);
+			currentVersion = 7B5112B22406F259003D0EE7 /* RideTrack.xcdatamodel */;
+			path = RideTrack.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 7B292EF423FAFFDD00E656B1 /* Project object */;
 }
