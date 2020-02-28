@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Kc5-lm-KmH">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -8,10 +8,12 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
+        <!--Record Ride-->
         <scene sceneID="ZrF-Vl-MZx">
             <objects>
                 <navigationController id="Kc5-lm-KmH" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Record Ride" image="location" catalog="system" selectedImage="location" id="4qP-Gp-Aos"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="B9L-fu-RFv">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -37,10 +39,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jFw-iE-kUu">
-                                <rect key="frame" x="10" y="96" width="394" height="746"/>
+                                <rect key="frame" x="10" y="96" width="394" height="697"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Record your ride" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Atf-ge-wDR">
-                                        <rect key="frame" x="97" y="0.0" width="200" height="248.5"/>
+                                        <rect key="frame" x="97" y="0.0" width="200" height="232.5"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="aC0-Nx-9z5"/>
@@ -50,10 +52,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="uab-7R-Dav">
-                                        <rect key="frame" x="15" y="248.5" width="364" height="497.5"/>
+                                        <rect key="frame" x="15" y="232.5" width="364" height="464.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L4A-af-hPG">
-                                                <rect key="frame" x="0.0" y="0.0" width="364" height="152.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="364" height="141.5"/>
                                                 <color key="backgroundColor" red="0.0" green="0.5725490196078431" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                 <state key="normal" title="New Ride"/>
@@ -62,13 +64,13 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fg4-PX-d9T">
-                                                <rect key="frame" x="0.0" y="172.5" width="364" height="152.5"/>
+                                                <rect key="frame" x="0.0" y="161.5" width="364" height="141.5"/>
                                                 <color key="backgroundColor" red="0.15215688939999999" green="0.34731644389999999" blue="0.51023852830000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                 <state key="normal" title="Past Ride"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3IR-sX-ByU">
-                                                <rect key="frame" x="0.0" y="345" width="364" height="152.5"/>
+                                                <rect key="frame" x="0.0" y="323" width="364" height="141.5"/>
                                                 <color key="backgroundColor" red="0.15215688939999999" green="0.34731644389999999" blue="0.51023852830000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                 <state key="normal" title="Achivements"/>
@@ -303,6 +305,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="location" catalog="system" width="64" height="56"/>
         <namedColor name="DefaultGreen">
             <color red="0.18823529411764706" green="0.67843137254901964" blue="0.38823529411764707" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
