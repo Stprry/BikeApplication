@@ -8,13 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		14F03E004809D3942109E877 /* Pods_BikeApplication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAFA7C7E069479AF30063EAD /* Pods_BikeApplication.framework */; };
+		7B0D4984240DDEA000FD5A60 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0D4983240DDEA000FD5A60 /* PhotoViewController.swift */; };
+		7B0D4986240DDF8500FD5A60 /* AnnotatedPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0D4985240DDF8500FD5A60 /* AnnotatedPhotoCell.swift */; };
+		7B0D4988240DDFBA00FD5A60 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0D4987240DDFBA00FD5A60 /* Photo.swift */; };
+		7B0D498A240DE01E00FD5A60 /* Photos.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7B0D4989240DE01D00FD5A60 /* Photos.plist */; };
+		7B0D498D240DE07C00FD5A60 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B0D498B240DE07B00FD5A60 /* Images.xcassets */; };
+		7B0D498E240DE07C00FD5A60 /* Photos.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B0D498C240DE07C00FD5A60 /* Photos.xcassets */; };
 		7B292F0023FAFFDD00E656B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B292EFF23FAFFDD00E656B1 /* AppDelegate.swift */; };
 		7B292F0223FAFFDD00E656B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B292F0123FAFFDD00E656B1 /* SceneDelegate.swift */; };
 		7B292F0423FAFFDD00E656B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B292F0323FAFFDD00E656B1 /* ViewController.swift */; };
 		7B292F0723FAFFDD00E656B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B292F0523FAFFDD00E656B1 /* Main.storyboard */; };
 		7B292F0923FAFFE000E656B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B292F0823FAFFE000E656B1 /* Assets.xcassets */; };
 		7B292F0C23FAFFE000E656B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B292F0A23FAFFE000E656B1 /* LaunchScreen.storyboard */; };
-		7B292F1423FB011900E656B1 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B292F1323FB011900E656B1 /* SplashViewController.swift */; };
 		7B292F1723FB015000E656B1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B292F1623FB015000E656B1 /* HomeViewController.swift */; };
 		7B292F1923FB015A00E656B1 /* ReigsterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B292F1823FB015A00E656B1 /* ReigsterViewController.swift */; };
 		7B292F1B23FB016900E656B1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B292F1A23FB016900E656B1 /* LoginViewController.swift */; };
@@ -27,14 +32,24 @@
 		7B292F3123FF6F3200E656B1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B292F3023FF6F3200E656B1 /* SettingsViewController.swift */; };
 		7B292F35240010B900E656B1 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B292F34240010B900E656B1 /* MainTabBarController.swift */; };
 		7B5112B02406F237003D0EE7 /* RideTrack.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B5112AF2406F237003D0EE7 /* RideTrack.storyboard */; };
-		7B5112B32406F259003D0EE7 /* RideTrack.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7B5112B12406F259003D0EE7 /* RideTrack.xcdatamodeld */; };
 		7B5112B62406F2C1003D0EE7 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5112B52406F2C1003D0EE7 /* CoreDataStack.swift */; };
 		7B5112B92406F33B003D0EE7 /* RideDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5112B82406F33B003D0EE7 /* RideDetailsViewController.swift */; };
 		7B5112BB2406F399003D0EE7 /* NewRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5112BA2406F399003D0EE7 /* NewRideViewController.swift */; };
 		7B5112BD2406F3F0003D0EE7 /* RideHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5112BC2406F3F0003D0EE7 /* RideHomeViewController.swift */; };
+		7BF53369240D65A000ECD598 /* RiderTracker.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 7BF53368240D65A000ECD598 /* RiderTracker.xcdatamodel */; };
+		7BF5336B240D67DC00ECD598 /* StoryboardSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF5336A240D67DC00ECD598 /* StoryboardSupport.swift */; };
+		7BF5336F240D7BE800ECD598 /* UnitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF5336E240D7BE800ECD598 /* UnitExtensions.swift */; };
+		7BF53371240D7C0D00ECD598 /* FormatDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF53370240D7C0D00ECD598 /* FormatDisplay.swift */; };
+		7BF53373240D7C2F00ECD598 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF53372240D7C2F00ECD598 /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7B0D4983240DDEA000FD5A60 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		7B0D4985240DDF8500FD5A60 /* AnnotatedPhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotatedPhotoCell.swift; sourceTree = "<group>"; };
+		7B0D4987240DDFBA00FD5A60 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		7B0D4989240DE01D00FD5A60 /* Photos.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Photos.plist; sourceTree = "<group>"; };
+		7B0D498B240DE07B00FD5A60 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		7B0D498C240DE07C00FD5A60 /* Photos.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Photos.xcassets; sourceTree = "<group>"; };
 		7B292EFC23FAFFDD00E656B1 /* BikeApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BikeApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B292EFF23FAFFDD00E656B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B292F0123FAFFDD00E656B1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,7 +58,6 @@
 		7B292F0823FAFFE000E656B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B292F0B23FAFFE000E656B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7B292F0D23FAFFE000E656B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7B292F1323FB011900E656B1 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		7B292F1623FB015000E656B1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		7B292F1823FB015A00E656B1 /* ReigsterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReigsterViewController.swift; sourceTree = "<group>"; };
 		7B292F1A23FB016900E656B1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -56,11 +70,15 @@
 		7B292F3023FF6F3200E656B1 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		7B292F34240010B900E656B1 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		7B5112AF2406F237003D0EE7 /* RideTrack.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RideTrack.storyboard; sourceTree = "<group>"; };
-		7B5112B22406F259003D0EE7 /* RideTrack.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RideTrack.xcdatamodel; sourceTree = "<group>"; };
 		7B5112B52406F2C1003D0EE7 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		7B5112B82406F33B003D0EE7 /* RideDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideDetailsViewController.swift; sourceTree = "<group>"; };
 		7B5112BA2406F399003D0EE7 /* NewRideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRideViewController.swift; sourceTree = "<group>"; };
 		7B5112BC2406F3F0003D0EE7 /* RideHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideHomeViewController.swift; sourceTree = "<group>"; };
+		7BF53368240D65A000ECD598 /* RiderTracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RiderTracker.xcdatamodel; sourceTree = "<group>"; };
+		7BF5336A240D67DC00ECD598 /* StoryboardSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardSupport.swift; sourceTree = "<group>"; };
+		7BF5336E240D7BE800ECD598 /* UnitExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitExtensions.swift; sourceTree = "<group>"; };
+		7BF53370240D7C0D00ECD598 /* FormatDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatDisplay.swift; sourceTree = "<group>"; };
+		7BF53372240D7C2F00ECD598 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		E65A0004AD12C9F2EF6FC687 /* Pods-BikeApplication.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BikeApplication.debug.xcconfig"; path = "Target Support Files/Pods-BikeApplication/Pods-BikeApplication.debug.xcconfig"; sourceTree = "<group>"; };
 		E66169277682EBD1B55364D4 /* Pods-BikeApplication.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BikeApplication.release.xcconfig"; path = "Target Support Files/Pods-BikeApplication/Pods-BikeApplication.release.xcconfig"; sourceTree = "<group>"; };
 		EAFA7C7E069479AF30063EAD /* Pods_BikeApplication.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BikeApplication.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,6 +102,19 @@
 				EAFA7C7E069479AF30063EAD /* Pods_BikeApplication.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7B0D4982240DDE7300FD5A60 /* PhotoViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7B0D498B240DE07B00FD5A60 /* Images.xcassets */,
+				7B0D498C240DE07C00FD5A60 /* Photos.xcassets */,
+				7B0D4983240DDEA000FD5A60 /* PhotoViewController.swift */,
+				7B0D4985240DDF8500FD5A60 /* AnnotatedPhotoCell.swift */,
+				7B0D4989240DE01D00FD5A60 /* Photos.plist */,
+				7B0D4987240DDFBA00FD5A60 /* Photo.swift */,
+			);
+			path = PhotoViewControllers;
 			sourceTree = "<group>";
 		};
 		7B292EF323FAFFDD00E656B1 = {
@@ -126,9 +157,9 @@
 		7B292F1523FB012200E656B1 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				7B0D4982240DDE7300FD5A60 /* PhotoViewControllers */,
 				7B5112B72406F317003D0EE7 /* RideTrackViewControllers */,
 				7B292F0323FAFFDD00E656B1 /* ViewController.swift */,
-				7B292F1323FB011900E656B1 /* SplashViewController.swift */,
 				7B292F1623FB015000E656B1 /* HomeViewController.swift */,
 				7B292F1823FB015A00E656B1 /* ReigsterViewController.swift */,
 				7B292F1A23FB016900E656B1 /* LoginViewController.swift */,
@@ -144,7 +175,10 @@
 			isa = PBXGroup;
 			children = (
 				7B292F1D23FB181400E656B1 /* Utilities.swift */,
+				7BF5336A240D67DC00ECD598 /* StoryboardSupport.swift */,
 				7B292F2523FB549300E656B1 /* Constants.swift */,
+				7BF5336E240D7BE800ECD598 /* UnitExtensions.swift */,
+				7BF53370240D7C0D00ECD598 /* FormatDisplay.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -160,8 +194,9 @@
 		7B5112B42406F260003D0EE7 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				7B5112B12406F259003D0EE7 /* RideTrack.xcdatamodeld */,
+				7BF53368240D65A000ECD598 /* RiderTracker.xcdatamodel */,
 				7B5112B52406F2C1003D0EE7 /* CoreDataStack.swift */,
+				7BF53372240D7C2F00ECD598 /* LocationManager.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -246,11 +281,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B292F0C23FAFFE000E656B1 /* LaunchScreen.storyboard in Resources */,
+				7B0D498D240DE07C00FD5A60 /* Images.xcassets in Resources */,
 				7B292F2423FB3EB300E656B1 /* GoogleService-Info.plist in Resources */,
+				7B0D498A240DE01E00FD5A60 /* Photos.plist in Resources */,
 				7B292F0923FAFFE000E656B1 /* Assets.xcassets in Resources */,
 				7B292F2923FB5A0700E656B1 /* bike.mp4 in Resources */,
 				7B5112B02406F237003D0EE7 /* RideTrack.storyboard in Resources */,
 				7B292F0723FAFFDD00E656B1 /* Main.storyboard in Resources */,
+				7B0D498E240DE07C00FD5A60 /* Photos.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,24 +341,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B0D4988240DDFBA00FD5A60 /* Photo.swift in Sources */,
 				7B5112B62406F2C1003D0EE7 /* CoreDataStack.swift in Sources */,
 				7B5112BB2406F399003D0EE7 /* NewRideViewController.swift in Sources */,
 				7B292F1B23FB016900E656B1 /* LoginViewController.swift in Sources */,
 				7B292F2F23FF6B0D00E656B1 /* SearchViewController.swift in Sources */,
 				7B5112B92406F33B003D0EE7 /* RideDetailsViewController.swift in Sources */,
+				7B0D4986240DDF8500FD5A60 /* AnnotatedPhotoCell.swift in Sources */,
 				7B5112BD2406F3F0003D0EE7 /* RideHomeViewController.swift in Sources */,
 				7B292F1723FB015000E656B1 /* HomeViewController.swift in Sources */,
+				7BF53369240D65A000ECD598 /* RiderTracker.xcdatamodel in Sources */,
 				7B292F1923FB015A00E656B1 /* ReigsterViewController.swift in Sources */,
 				7B292F2D23FF6AB300E656B1 /* MapViewController.swift in Sources */,
 				7B292F0423FAFFDD00E656B1 /* ViewController.swift in Sources */,
+				7BF5336F240D7BE800ECD598 /* UnitExtensions.swift in Sources */,
+				7BF5336B240D67DC00ECD598 /* StoryboardSupport.swift in Sources */,
 				7B292F0023FAFFDD00E656B1 /* AppDelegate.swift in Sources */,
+				7BF53373240D7C2F00ECD598 /* LocationManager.swift in Sources */,
 				7B292F35240010B900E656B1 /* MainTabBarController.swift in Sources */,
+				7BF53371240D7C0D00ECD598 /* FormatDisplay.swift in Sources */,
 				7B292F0223FAFFDD00E656B1 /* SceneDelegate.swift in Sources */,
 				7B292F1E23FB181400E656B1 /* Utilities.swift in Sources */,
-				7B292F1423FB011900E656B1 /* SplashViewController.swift in Sources */,
 				7B292F2623FB549300E656B1 /* Constants.swift in Sources */,
 				7B292F3123FF6F3200E656B1 /* SettingsViewController.swift in Sources */,
-				7B5112B32406F259003D0EE7 /* RideTrack.xcdatamodeld in Sources */,
+				7B0D4984240DDEA000FD5A60 /* PhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,19 +564,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		7B5112B12406F259003D0EE7 /* RideTrack.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				7B5112B22406F259003D0EE7 /* RideTrack.xcdatamodel */,
-			);
-			currentVersion = 7B5112B22406F259003D0EE7 /* RideTrack.xcdatamodel */;
-			path = RideTrack.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 7B292EF423FAFFDD00E656B1 /* Project object */;
 }

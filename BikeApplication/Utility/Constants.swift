@@ -14,5 +14,7 @@ struct Constants {
         static let homeViewContrl = "HomeVC"
         static let homeNav = "HomeNav"
         static let tabController = "TabController"
+        static let rideDetails = "RideDetailsVC"
+        static let newRide = "NewRideVC"
     }
 }

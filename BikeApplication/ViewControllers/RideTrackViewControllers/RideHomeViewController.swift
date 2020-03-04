@@ -10,13 +10,23 @@ import UIKit
 
 class RideHomeViewController: UIViewController {
 
+    
+    @IBOutlet weak var NewRideBtn: UIButton!
+    @IBOutlet weak var PastRideBtn: UIButton!
+    @IBOutlet weak var AchievementBtn: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        frontEndSetUp()
         // Do any additional setup after loading the view.
     }
     
-
+    func frontEndSetUp(){
+           Utilities.styleFilledButton(AchievementBtn)
+           Utilities.styleFilledButton(PastRideBtn)
+           Utilities.styleFilledButton(NewRideBtn)
+       }
     /*
     // MARK: - Navigation
 

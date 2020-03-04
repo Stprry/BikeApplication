@@ -96,6 +96,11 @@
                         <viewLayoutGuide key="safeArea" id="qor-3u-eqH"/>
                     </view>
                     <navigationItem key="navigationItem" id="1SA-cD-V7r"/>
+                    <connections>
+                        <outlet property="AchievementBtn" destination="3IR-sX-ByU" id="Tak-FY-zxe"/>
+                        <outlet property="NewRideBtn" destination="L4A-af-hPG" id="dH8-md-kJm"/>
+                        <outlet property="PastRideBtn" destination="fg4-PX-d9T" id="BE2-WJ-OJY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xdY-sN-974" sceneMemberID="firstResponder"/>
             </objects>
@@ -163,14 +168,13 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ua8-gs-cL2">
                                                 <rect key="frame" x="0.0" y="0.0" width="314" height="348.5"/>
-                                                <color key="backgroundColor" name="DefaultGreen"/>
+                                                <color key="backgroundColor" red="0.0" green="0.57254901960000004" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                                <state key="normal" title="Start!">
+                                                <state key="normal" title="Send it!">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="startTapped" destination="pla-2S-jsZ" eventType="touchUpInside" id="WrX-sY-jfB"/>
-                                                    <segue destination="tRF-gQ-TbA" kind="show" id="8du-tU-SGf"/>
                                                 </connections>
                                             </button>
                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Dy-g1-Oub">
@@ -211,6 +215,7 @@
                         <outlet property="startButton" destination="Ua8-gs-cL2" id="s3K-9a-G1z"/>
                         <outlet property="stopButton" destination="4Dy-g1-Oub" id="NTE-s5-aNz"/>
                         <outlet property="timeLabel" destination="CGH-5h-Awj" id="f8M-0y-Kh6"/>
+                        <segue destination="tRF-gQ-TbA" kind="show" id="vei-qh-utW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gjY-eS-fyb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -220,7 +225,7 @@
         <!--Ride Details View Controller-->
         <scene sceneID="nR9-eh-dPk">
             <objects>
-                <viewController id="tRF-gQ-TbA" customClass="RideDetailsViewController" customModule="BikeApplication" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RideDetailsVC" id="tRF-gQ-TbA" customClass="RideDetailsViewController" customModule="BikeApplication" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="57D-0Z-q2D"/>
                         <viewControllerLayoutGuide type="bottom" id="GEU-Yg-DXu"/>
