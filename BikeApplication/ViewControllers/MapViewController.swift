@@ -7,9 +7,14 @@
 //
 
 import UIKit
+import MapKit
 
 class MapViewController: UIViewController {
-
+    
+    @IBOutlet weak var HostButton: UIButton!
+    
+    @IBOutlet weak var ViewButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

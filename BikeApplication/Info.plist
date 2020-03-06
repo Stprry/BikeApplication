@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Project Gnarr needs access to your location in order to record and track your run!</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -22,6 +20,14 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>We need acess to your camera to take pictures!</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Project Gnarr needs access to your location in order to record and track your run!</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>this app wants to save photos</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>We want to use your photo libaray</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
