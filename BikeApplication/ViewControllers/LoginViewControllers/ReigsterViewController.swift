@@ -85,22 +85,28 @@ class ReigsterViewController: UIViewController {
             // if no errors create user
             
             Auth.auth().createUser(withEmail: email, password: password) { (result, err) in
-                
+                ///CHANGE UID ID TO EQUAL DOC ID
                 //error check
                 if  err != nil{
                     self.showError("error creating user")
                 }else{
                     //user sucsessfuly created, storing first and last name
                     let db = Firestore.firestore()
-                    
+
                     db.collection("users").addDocument(data: ["firstName":firstName,"lastName":lastName,"uid":result!.user.uid,"email":email]) { (error) in
                         if error != nil{
                             // error in database show error
                             self.showError("Something went wrong on our servers, First name or last name had something wrong")
                         }
                     }
+                  let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+                        changeRequest?.displayName = firstName + " " + lastName
+                        changeRequest?.commitChanges { (error) in
+                          // ...
+                        }
                     // go to homescreen
                     self.transitionHome()
+                    
                 }
             }
         }
@@ -118,5 +124,4 @@ class ReigsterViewController: UIViewController {
            view.window?.makeKeyAndVisible()
 
     }
-    
 }

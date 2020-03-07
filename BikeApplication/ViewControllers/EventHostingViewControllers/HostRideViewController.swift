@@ -24,7 +24,7 @@ class HostRideViewController: UIViewController, UIPickerViewDelegate,UIPickerVie
     @IBOutlet weak var RideTypeBtn: UIButton!
     @IBOutlet weak var RideLeaderLbl: UILabel!
     @IBOutlet weak var RideLeaderSwitch: UISwitch!
-    @IBOutlet weak var OtherRideLeaderFeild: UITextField!
+    @IBOutlet weak var OtherRideLeaderBtn: UIButton!
     @IBOutlet weak var RideLocationLbl: UILabel!
     @IBOutlet weak var RideLocationSearch: UISearchBar!
     @IBOutlet weak var RideDateLbl: UILabel!
@@ -37,6 +37,7 @@ class HostRideViewController: UIViewController, UIPickerViewDelegate,UIPickerVie
     /* https://codewithchris.com/uipickerview-example/ */
     var pickerData:[String] = [String]()// declare new array instance to store data acessable in any method ofthe class
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -47,7 +48,7 @@ class HostRideViewController: UIViewController, UIPickerViewDelegate,UIPickerVie
         //input data into array
         pickerData = ["Down Hill","Enduro","XC","Dirt Jumps","Chill Ride"]
         // hide other leader feild on load
-        OtherRideLeaderFeild.isHidden = true
+        OtherRideLeaderBtn.isHidden = true
     }
     // The data to return for the row and component (column) that's being passed in
      func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
@@ -70,49 +71,18 @@ class HostRideViewController: UIViewController, UIPickerViewDelegate,UIPickerVie
     @IBAction func RideLeaderSwitchOn(_ sender: Any) {
        // hide feild for other user search
         if RideLeaderSwitch.isOn{
-            OtherRideLeaderFeild.isHidden = true
+            OtherRideLeaderBtn.isHidden = true
             // perform databse search for current user info
             let user = Auth.auth().currentUser
             let db = Firestore.firestore()
             if let user = user{
                 let uid = user.uid
-//                let email = user.email
-//                let userRef = db.collection("users").document(uid)
-                
-                let docRef = db.collection("users").document(uid)
-                // Force the SDK to fetch the document from the cache. Could also specify
-                // FirestoreSource.server or FirestoreSource.default.
-                docRef.getDocument(source: .cache) { (document, error) in
-                  if let document = document {
-                    let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
-                    print("Cached document data: \(dataDescription)")
-                  } else {
-                    print("Document does not exist in cache")
-                  }
+                let displayName = user.displayName
                 }
-
-                
-                
-//                let firstname = db.collection("users").whereField("uid", isEqualTo: uid)
-//                          userRef.getDocument { (document, error) in
-//                              if let document = document, document.exists {
-//                              let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
-//                              print("Document data: \(dataDescription)")
-//                              var firstname = document.get("firstName")
-//                          } else {
-//                              print("Document does not exist")
-//                          }
-//                      }
-            }
-            
-                
-                
-                // var fn = db.collection("users").document("firstName")
-    s
-            
-        }else{
+            //print(user?.displayName)
+            }else{
              // if im NOT ride lead, Get user to enter another users First and Last Name and do an firebase search for a matching user
-            OtherRideLeaderFeild.isHidden = false
+            OtherRideLeaderBtn.isHidden = false
         }
     }
     @IBAction func RideLeaderSwitchOff(_ sender: Any) {
