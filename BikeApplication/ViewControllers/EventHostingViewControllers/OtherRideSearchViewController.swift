@@ -10,35 +10,54 @@ import UIKit
 import Firebase
 import FirebaseAuth
 
-class OtherRideSearchViewController: UIViewController {
+class OtherRideSearchViewController: UIViewController, UITableViewDelegate,UITableViewDataSource {
 
     @IBOutlet weak var SearchBar: UISearchBar!
     @IBOutlet weak var TableView: UITableView!
-    
-    
-    
+    var myUsers:[MyUser] = []
     //var riderList = [RiderList]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
         getUsers()
+        TableView.dataSource = self
+        TableView.delegate = self
     }
-    func getUsers(){// maybe make async?
-    let db = Firestore.firestore()
-     db.collection("users").getDocuments() { (snapshot, err) in
-         if let err = err {
-             print("Error getting documents: \(err)")
-         } else {
-            let documents = snapshot!.documents
-            
-           try! documents.forEach{document in
-                let myUser: MyUser = try document.decoded()
-            print(myUser)
-            }
-         }
-     }
-  }
     
+ func getUsers(){
+        let db = Firestore.firestore()
+        db.collection("users").getDocuments() { (snapshot, err) in
+        if let err = err {
+            print("Error getting documents: \(err)")
+        } else {
+            let documents = snapshot!.documents
+            try! documents.forEach{document in
+                let myUser: MyUser = try document.decoded()
+                print(myUser.firstName)
+                //3.)Appending the data to the array
+                self.myUsers.append(myUser)
+            }
+            //4.) Reloading your tableview AFTER the foreach
+            self.TableView.reloadData()
+            }
+        }
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return myUsers.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "RiderListCell", for: indexPath)
+        let user = myUsers[indexPath.row]
+        cell.textLabel!.text = user.firstName
+        cell.detailTextLabel?.text = user.lastName
+        
+        return cell
+    }
 }

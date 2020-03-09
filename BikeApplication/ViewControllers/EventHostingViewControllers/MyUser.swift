@@ -9,8 +9,10 @@
 import Foundation
 
 struct MyUser: Decodable{
-    let firstName:String
-    let lastName:String
-    let email:String
-    let uid:String
+    let firstName : String
+    let lastName : String
+    let email : String
+    let uid : String
 }
+
+

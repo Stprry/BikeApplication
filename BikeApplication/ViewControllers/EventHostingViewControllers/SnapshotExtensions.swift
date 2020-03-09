@@ -15,6 +15,4 @@ extension QueryDocumentSnapshot{
         let object = try JSONDecoder().decode(T.self, from: jsonData)
         return object
     }
-        
-    
 }
