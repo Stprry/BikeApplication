@@ -24,7 +24,8 @@ class OtherRideSearchViewController: UIViewController, UITableViewDelegate,UITab
         TableView.dataSource = self
         TableView.delegate = self
     }
-    
+ 
+   
  func getUsers(){
         let db = Firestore.firestore()
         db.collection("users").getDocuments() { (snapshot, err) in
@@ -59,5 +60,14 @@ class OtherRideSearchViewController: UIViewController, UITableViewDelegate,UITab
         cell.detailTextLabel?.text = user.lastName
         
         return cell
+    }
+// sends user data with seuge and index of table view to the user profile page
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    guard let profileViewController = segue.destination as? ProfileViewController,
+        let index = TableView.indexPathForSelectedRow?.row
+        else {
+            return
+     }
+    profileViewController.user = myUsers[index]
     }
 }

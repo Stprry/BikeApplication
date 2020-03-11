@@ -33,11 +33,12 @@ class HostRideViewController: UIViewController, UIPickerViewDelegate,UIPickerVie
     @IBOutlet weak var SubmitBtn: UIButton!
     @IBOutlet weak var RideTypePicker: UIPickerView!
     @IBOutlet weak var RideDatePicker: UIDatePicker!
+    @IBOutlet weak var RideTypeSelection: UILabel!
     
     /* https://codewithchris.com/uipickerview-example/ */
     var pickerData:[String] = [String]()// declare new array instance to store data acessable in any method ofthe class
-    
-    
+    var SelectedRideLeaderUser: MyUser?
+    var selectedType:String?
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -48,8 +49,18 @@ class HostRideViewController: UIViewController, UIPickerViewDelegate,UIPickerVie
         //input data into array
         pickerData = ["Down Hill","Enduro","XC","Dirt Jumps","Chill Ride"]
         // hide other leader feild on load
-        OtherRideLeaderBtn.isHidden = true
+       // OtherRideLeaderBtn.isHidden = true
+        RideTypeSelection.isHidden = true
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+         super.viewWillAppear(animated)
+        let rideleaderLastName = SelectedRideLeaderUser?.lastName
+         OtherRideLeaderBtn.titleLabel?.text = rideleaderLastName
+        //RideTypeBtn.titleLabel?.text = selectedType
+        RideTypeSelection.text = selectedType
+         
+     }
     // The data to return for the row and component (column) that's being passed in
      func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
          return pickerData[row]
@@ -57,11 +68,15 @@ class HostRideViewController: UIViewController, UIPickerViewDelegate,UIPickerVie
 
     // Capture the picker view selection
      func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
-            RideTypeBtn.titleLabel?.text = pickerData[row]
+            //RideTypeBtn.titleLabel?.text = pickerData[row]
+        RideTypeSelection.text = pickerData[row]
+        selectedType = pickerData[row]
       }
     
     @IBAction func RideTypeBtnTap(_ sender: Any) {
          RideTypePicker.isHidden = false
+        RideTypeSelection.isHidden = false
+        RideTypeBtn.isHidden = true
     }
     @IBAction func HidePicker(_ sender: Any) {
         RideTypePicker.isHidden = true
@@ -87,6 +102,11 @@ class HostRideViewController: UIViewController, UIPickerViewDelegate,UIPickerVie
     }
     @IBAction func RideLeaderSwitchOff(_ sender: Any) {
         
+    }
+    @IBAction func save(_ unwindSegue: UIStoryboardSegue) {
+        if let profileViewController = unwindSegue.source as? ProfileViewController {
+            SelectedRideLeaderUser = profileViewController.user
+        }
     }
   
     

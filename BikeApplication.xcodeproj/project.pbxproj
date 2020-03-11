@@ -20,6 +20,7 @@
 		7B0D49992413F3DC00FD5A60 /* OtherRideSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0D49982413F3DC00FD5A60 /* OtherRideSearchViewController.swift */; };
 		7B0D499B241404CA00FD5A60 /* SnapshotExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0D499A241404CA00FD5A60 /* SnapshotExtensions.swift */; };
 		7B0D499D241404FD00FD5A60 /* MyUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0D499C241404FD00FD5A60 /* MyUser.swift */; };
+		7B27E4B2241947AF00105E97 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B27E4B1241947AF00105E97 /* ProfileViewController.swift */; };
 		7B292F0023FAFFDD00E656B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B292EFF23FAFFDD00E656B1 /* AppDelegate.swift */; };
 		7B292F0223FAFFDD00E656B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B292F0123FAFFDD00E656B1 /* SceneDelegate.swift */; };
 		7B292F0423FAFFDD00E656B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B292F0323FAFFDD00E656B1 /* ViewController.swift */; };
@@ -60,6 +61,7 @@
 		7B0D49982413F3DC00FD5A60 /* OtherRideSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherRideSearchViewController.swift; sourceTree = "<group>"; };
 		7B0D499A241404CA00FD5A60 /* SnapshotExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotExtensions.swift; sourceTree = "<group>"; };
 		7B0D499C241404FD00FD5A60 /* MyUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyUser.swift; sourceTree = "<group>"; };
+		7B27E4B1241947AF00105E97 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		7B292EFC23FAFFDD00E656B1 /* BikeApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BikeApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B292EFF23FAFFDD00E656B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B292F0123FAFFDD00E656B1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 		7B0D499524128A5A00FD5A60 /* EventHostingViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				7B27E4B1241947AF00105E97 /* ProfileViewController.swift */,
 				7B0D499624128A9A00FD5A60 /* HostRideViewController.swift */,
 				7B0D49982413F3DC00FD5A60 /* OtherRideSearchViewController.swift */,
 				7B0D499A241404CA00FD5A60 /* SnapshotExtensions.swift */,
@@ -390,6 +393,7 @@
 				7B292F1923FB015A00E656B1 /* ReigsterViewController.swift in Sources */,
 				7B292F2D23FF6AB300E656B1 /* MapViewController.swift in Sources */,
 				7B292F0423FAFFDD00E656B1 /* ViewController.swift in Sources */,
+				7B27E4B2241947AF00105E97 /* ProfileViewController.swift in Sources */,
 				7BF5336F240D7BE800ECD598 /* UnitExtensions.swift in Sources */,
 				7BF5336B240D67DC00ECD598 /* StoryboardSupport.swift in Sources */,
 				7B292F0023FAFFDD00E656B1 /* AppDelegate.swift in Sources */,
