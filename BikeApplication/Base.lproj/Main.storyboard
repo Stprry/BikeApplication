@@ -355,11 +355,11 @@
             <objects>
                 <viewController storyboardIdentifier="ProfileVC" id="gx2-H3-UiS" customClass="ProfileViewController" customModule="BikeApplication" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wgw-J3-EfU">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="WTw-1R-iQg">
-                                <rect key="frame" x="107" y="376" width="200" height="91.5"/>
+                                <rect key="frame" x="107" y="408" width="200" height="91.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZuW-fY-ZDg">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="20.5"/>
@@ -379,6 +379,18 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YAV-In-j19">
+                                        <rect key="frame" x="0.0" y="91.5" width="200" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1vc-2k-9GK">
+                                        <rect key="frame" x="0.0" y="91.5" width="200" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="ZuW-fY-ZDg" firstAttribute="centerX" secondItem="WTw-1R-iQg" secondAttribute="centerX" id="BJn-lg-R47"/>
@@ -387,14 +399,14 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tY3-Qw-XZs">
-                                <rect key="frame" x="107" y="487.5" width="220" height="30"/>
+                                <rect key="frame" x="107" y="519.5" width="220" height="30"/>
                                 <state key="normal" title="Add as ride leader"/>
                                 <connections>
                                     <action selector="SelectedLeaderpressed:" destination="gx2-H3-UiS" eventType="touchUpInside" id="tea-dF-zS7"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="02" translatesAutoresizingMaskIntoConstraints="NO" id="LZp-Xz-sDx">
-                                <rect key="frame" x="107" y="118" width="200" height="200"/>
+                                <rect key="frame" x="107" y="150" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="UU1-zl-LAT"/>
                                     <constraint firstAttribute="height" constant="200" id="hU3-jF-ZSw"/>
@@ -418,6 +430,8 @@
                     <connections>
                         <outlet property="AddasLeaderBtn" destination="tY3-Qw-XZs" id="G0H-Y7-r3B"/>
                         <outlet property="FirstNameFeild" destination="ZuW-fY-ZDg" id="2ve-vg-XAw"/>
+                        <outlet property="HiddenEmail" destination="YAV-In-j19" id="bLF-cf-fLX"/>
+                        <outlet property="HiddenUID" destination="1vc-2k-9GK" id="e59-cD-TF3"/>
                         <outlet property="LastNameFeild" destination="vWo-hl-36t" id="6pT-Bf-OqZ"/>
                         <outlet property="ProfilePictureImageView" destination="LZp-Xz-sDx" id="djX-4I-v71"/>
                         <outlet property="UserBioFeild" destination="6LE-Cc-dkT" id="GjT-cP-0uc"/>
@@ -432,7 +446,7 @@
             <objects>
                 <viewController storyboardIdentifier="ORSearchVC" id="IZb-G9-pg4" customClass="OtherRideSearchViewController" customModule="BikeApplication" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nNR-hT-7JZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" fixedFrame="YES" placeholder="Search Riders" translatesAutoresizingMaskIntoConstraints="NO" id="F2h-1S-xuv">
@@ -475,10 +489,10 @@
         <!--Navigation Controller-->
         <scene sceneID="5xp-Rv-F6v">
             <objects>
-                <navigationController id="ugI-jD-Kfc" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="RIderSelectionNav" id="ugI-jD-Kfc" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="aeH-ZE-M8w"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="V1H-Q3-5Wd">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -498,7 +512,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="52n-eq-Apt">
-                                <rect key="frame" x="8" y="79" width="398" height="397.5"/>
+                                <rect key="frame" x="8" y="79" width="398" height="418"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ride Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LB1-GX-7tt">
                                         <rect key="frame" x="0.0" y="0.0" width="398" height="20.5"/>
@@ -524,11 +538,15 @@
                                             <action selector="RideTypeBtnTap:" destination="Ct6-zg-DIr" eventType="touchUpInside" id="kU7-pf-IO3"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HTr-po-XOV">
+                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HTr-po-XOV">
                                         <rect key="frame" x="0.0" y="105" width="398" height="50"/>
+                                        <gestureRecognizers/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="QYM-jI-8UX" appends="YES" id="YuE-P5-EWN"/>
+                                        </connections>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Will you be the Ride Leader?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NVm-SI-oHh">
                                         <rect key="frame" x="0.0" y="155" width="398" height="20.5"/>
@@ -547,32 +565,38 @@
                                         <rect key="frame" x="0.0" y="206.5" width="398" height="30"/>
                                         <state key="normal" title="Select Other Ride leader"/>
                                         <connections>
-                                            <segue destination="ugI-jD-Kfc" kind="show" id="dBU-10-bya"/>
+                                            <action selector="OtherRideLeaderTap:" destination="Ct6-zg-DIr" eventType="touchUpInside" id="Bue-4K-5va"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where is the ride?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ko8-Vf-pha">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dao-wj-CAU">
                                         <rect key="frame" x="0.0" y="236.5" width="398" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where is the ride?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ko8-Vf-pha">
+                                        <rect key="frame" x="0.0" y="257" width="398" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Adress is where to gather before the ride" translatesAutoresizingMaskIntoConstraints="NO" id="A8l-1a-rDd">
-                                        <rect key="frame" x="0.0" y="257" width="398" height="56"/>
+                                        <rect key="frame" x="0.0" y="277.5" width="398" height="56"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </searchBar>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When Is the ride?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A80-vc-VfD">
-                                        <rect key="frame" x="0.0" y="313" width="398" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="333.5" width="398" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tap here to choose a date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UG1-97-xaH">
-                                        <rect key="frame" x="0.0" y="333.5" width="398" height="34"/>
+                                        <rect key="frame" x="0.0" y="354" width="398" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lLJ-bT-wOb">
-                                        <rect key="frame" x="0.0" y="367.5" width="398" height="30"/>
+                                        <rect key="frame" x="0.0" y="388" width="398" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V2x-5J-cax">
                                                 <rect key="frame" x="0.0" y="0.0" width="199" height="30"/>
@@ -592,40 +616,39 @@
                                 </subviews>
                             </stackView>
                             <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LPd-Bh-krH">
-                                <rect key="frame" x="47" y="594" width="320" height="216"/>
+                                <rect key="frame" x="10" y="594" width="394" height="216"/>
+                                <gestureRecognizers/>
                             </pickerView>
                             <datePicker hidden="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="1Fn-7R-otf">
-                                <rect key="frame" x="8" y="564" width="398" height="216"/>
+                                <rect key="frame" x="10" y="588" width="394" height="220"/>
                                 <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="JeP-X4-9BG" appends="YES" id="Eul-tW-k9B"/>
-                                    <outletCollection property="gestureRecognizers" destination="JeP-X4-9BG" appends="YES" id="rpJ-Au-sXn"/>
-                                </connections>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="220" id="KSE-Ay-4zr"/>
+                                </constraints>
                             </datePicker>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="52n-eq-Apt" firstAttribute="top" secondItem="zX0-NX-vNJ" secondAttribute="top" constant="79" id="01e-2S-Lw9"/>
-                            <constraint firstItem="1Fn-7R-otf" firstAttribute="top" secondItem="52n-eq-Apt" secondAttribute="bottom" constant="87.5" id="0Ed-vF-yPc"/>
-                            <constraint firstItem="52n-eq-Apt" firstAttribute="leading" secondItem="1Fn-7R-otf" secondAttribute="leading" id="5iX-hC-NbQ"/>
                             <constraint firstItem="52n-eq-Apt" firstAttribute="leading" secondItem="zX0-NX-vNJ" secondAttribute="leading" constant="8" id="E83-XG-H0J"/>
+                            <constraint firstItem="1Fn-7R-otf" firstAttribute="trailing" secondItem="LPd-Bh-krH" secondAttribute="trailing" id="FTz-dz-2d9"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="LPd-Bh-krH" secondAttribute="bottom" constant="-2" id="JM1-Kc-YNj"/>
                             <constraint firstItem="zX0-NX-vNJ" firstAttribute="trailing" secondItem="52n-eq-Apt" secondAttribute="trailing" constant="8" id="LBb-JM-0Or"/>
-                            <constraint firstItem="52n-eq-Apt" firstAttribute="trailing" secondItem="1Fn-7R-otf" secondAttribute="trailing" id="bIM-sn-mDJ"/>
+                            <constraint firstItem="1Fn-7R-otf" firstAttribute="leading" secondItem="LPd-Bh-krH" secondAttribute="leading" id="X15-xJ-Rzx"/>
+                            <constraint firstItem="1Fn-7R-otf" firstAttribute="leading" secondItem="zX0-NX-vNJ" secondAttribute="leading" constant="10" id="e1I-Js-DW0"/>
+                            <constraint firstItem="1Fn-7R-otf" firstAttribute="bottom" secondItem="zX0-NX-vNJ" secondAttribute="bottom" id="eZq-d7-2aH"/>
                             <constraint firstItem="zX0-NX-vNJ" firstAttribute="trailing" secondItem="52n-eq-Apt" secondAttribute="trailing" constant="8" id="gqP-CU-eJp"/>
+                            <constraint firstItem="1Fn-7R-otf" firstAttribute="centerX" secondItem="52n-eq-Apt" secondAttribute="centerX" id="hez-Js-UTq"/>
                             <constraint firstItem="52n-eq-Apt" firstAttribute="leading" secondItem="zX0-NX-vNJ" secondAttribute="leading" constant="8" id="lpk-CE-2hy"/>
-                            <constraint firstItem="52n-eq-Apt" firstAttribute="centerX" secondItem="LPd-Bh-krH" secondAttribute="centerX" id="vyy-NG-ktA"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="LPd-Bh-krH" secondAttribute="bottom" constant="-2" id="xo2-Xc-rMa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zX0-NX-vNJ"/>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="JeP-X4-9BG" appends="YES" id="6Jv-hR-D1B"/>
-                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="XhH-IK-7y7"/>
                     <connections>
                         <outlet property="CancelRideBtn" destination="V2x-5J-cax" id="QVG-nl-byb"/>
                         <outlet property="OtherRideLeaderBtn" destination="0Xo-Rk-LQq" id="gHB-Cb-5qE"/>
+                        <outlet property="OtherRideLeaderLbl" destination="Dao-wj-CAU" id="B7f-1S-fNR"/>
                         <outlet property="RideDateFeild" destination="UG1-97-xaH" id="aR1-Ee-Bg8"/>
                         <outlet property="RideDateLbl" destination="A80-vc-VfD" id="Bsj-8R-HAs"/>
                         <outlet property="RideDatePicker" destination="1Fn-7R-otf" id="EJ1-4b-QPP"/>
@@ -643,13 +666,14 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zt1-ui-DO4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="JeP-X4-9BG">
+                <tapGestureRecognizer id="QYM-jI-8UX">
                     <connections>
-                        <action selector="HidePicker:" destination="Ct6-zg-DIr" id="NA5-8p-knT"/>
+                        <action selector="showPickerTap:" destination="Ct6-zg-DIr" id="uz7-d2-8sG"/>
+                        <outlet property="delegate" destination="HTr-po-XOV" id="Nui-Wj-sMO"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="4261" y="1526"/>
+            <point key="canvasLocation" x="4220" y="1551"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0Cw-pz-MLM">

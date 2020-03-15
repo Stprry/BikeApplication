@@ -9,13 +9,20 @@
 import UIKit
 import Firebase
 import FirebaseAuth
-
+protocol PasstoHostDelegate {
+    func passDataToHost(firstName:String,lastName:String,uid:String)
+}
 class OtherRideSearchViewController: UIViewController, UITableViewDelegate,UITableViewDataSource {
 
     @IBOutlet weak var SearchBar: UISearchBar!
     @IBOutlet weak var TableView: UITableView!
     var myUsers:[MyUser] = []
-    //var riderList = [RiderList]()
+    var selectFirstName:String?
+    var selectLastName:String?
+    var selectUID:String?
+    
+    var passDelegate:PasstoHostDelegate!///delegate to host
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,8 +31,9 @@ class OtherRideSearchViewController: UIViewController, UITableViewDelegate,UITab
         TableView.dataSource = self
         TableView.delegate = self
     }
- 
-   
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
  func getUsers(){
         let db = Firestore.firestore()
         db.collection("users").getDocuments() { (snapshot, err) in
@@ -67,7 +75,22 @@ class OtherRideSearchViewController: UIViewController, UITableViewDelegate,UITab
         let index = TableView.indexPathForSelectedRow?.row
         else {
             return
-     }
-    profileViewController.user = myUsers[index]
+        }
+        profileViewController.user = myUsers[index]
+        profileViewController.selectionDelegate = self
+    }
+    @objc func advance(){
+         passDelegate.passDataToHost(firstName: selectFirstName!, lastName: selectLastName!, uid: selectUID!)
+        dismiss(animated: true, completion: nil)
     }
 }
+extension OtherRideSearchViewController:RiderSelectionDelegate{
+    func selectedRideLeader(firstName: String, lastName: String, uid: String) {
+        print(firstName,uid,lastName)
+        selectUID = uid
+        selectLastName = lastName
+        selectFirstName = firstName
+        perform(#selector(advance),with:nil,afterDelay: 1)
+    }
+}
+
