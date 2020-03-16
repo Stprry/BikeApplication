@@ -21,6 +21,8 @@
 		7B0D499B241404CA00FD5A60 /* SnapshotExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0D499A241404CA00FD5A60 /* SnapshotExtensions.swift */; };
 		7B0D499D241404FD00FD5A60 /* MyUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0D499C241404FD00FD5A60 /* MyUser.swift */; };
 		7B27E4B2241947AF00105E97 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B27E4B1241947AF00105E97 /* ProfileViewController.swift */; };
+		7B27E4B4241F790C00105E97 /* LocationSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B27E4B3241F790C00105E97 /* LocationSearchViewController.swift */; };
+		7B27E4B6241F962F00105E97 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B27E4B5241F962F00105E97 /* MapKit.framework */; };
 		7B292F0023FAFFDD00E656B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B292EFF23FAFFDD00E656B1 /* AppDelegate.swift */; };
 		7B292F0223FAFFDD00E656B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B292F0123FAFFDD00E656B1 /* SceneDelegate.swift */; };
 		7B292F0423FAFFDD00E656B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B292F0323FAFFDD00E656B1 /* ViewController.swift */; };
@@ -62,6 +64,8 @@
 		7B0D499A241404CA00FD5A60 /* SnapshotExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotExtensions.swift; sourceTree = "<group>"; };
 		7B0D499C241404FD00FD5A60 /* MyUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyUser.swift; sourceTree = "<group>"; };
 		7B27E4B1241947AF00105E97 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		7B27E4B3241F790C00105E97 /* LocationSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchViewController.swift; sourceTree = "<group>"; };
+		7B27E4B5241F962F00105E97 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		7B292EFC23FAFFDD00E656B1 /* BikeApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BikeApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B292EFF23FAFFDD00E656B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B292F0123FAFFDD00E656B1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B27E4B6241F962F00105E97 /* MapKit.framework in Frameworks */,
 				14F03E004809D3942109E877 /* Pods_BikeApplication.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -109,6 +114,7 @@
 		497ED9A95A7BCE554FB4B750 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7B27E4B5241F962F00105E97 /* MapKit.framework */,
 				EAFA7C7E069479AF30063EAD /* Pods_BikeApplication.framework */,
 			);
 			name = Frameworks;
@@ -153,6 +159,7 @@
 				7B0D49982413F3DC00FD5A60 /* OtherRideSearchViewController.swift */,
 				7B0D499A241404CA00FD5A60 /* SnapshotExtensions.swift */,
 				7B0D499C241404FD00FD5A60 /* MyUser.swift */,
+				7B27E4B3241F790C00105E97 /* LocationSearchViewController.swift */,
 			);
 			path = EventHostingViewControllers;
 			sourceTree = "<group>";
@@ -387,6 +394,7 @@
 				7B0D499D241404FD00FD5A60 /* MyUser.swift in Sources */,
 				7B5112B92406F33B003D0EE7 /* RideDetailsViewController.swift in Sources */,
 				7B0D4986240DDF8500FD5A60 /* AnnotatedPhotoCell.swift in Sources */,
+				7B27E4B4241F790C00105E97 /* LocationSearchViewController.swift in Sources */,
 				7B5112BD2406F3F0003D0EE7 /* RideHomeViewController.swift in Sources */,
 				7BF53369240D65A000ECD598 /* RiderTracker.xcdatamodel in Sources */,
 				7B0D499724128A9A00FD5A60 /* HostRideViewController.swift in Sources */,

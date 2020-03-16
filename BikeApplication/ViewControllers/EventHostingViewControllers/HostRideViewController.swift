@@ -33,7 +33,7 @@ class HostRideViewController: UIViewController, UIPickerViewDelegate,UIPickerVie
     @IBOutlet weak var RideLeaderSwitch: UISwitch!
     @IBOutlet weak var OtherRideLeaderBtn: UIButton!
     @IBOutlet weak var RideLocationLbl: UILabel!
-    @IBOutlet weak var RideLocationSearch: UISearchBar!
+    @IBOutlet weak var RideLocationLabel: UILabel!
     @IBOutlet weak var RideDateLbl: UILabel!
     @IBOutlet weak var RideDateFeild: UITextField!
     @IBOutlet weak var CancelRideBtn: UIButton!
@@ -47,8 +47,9 @@ class HostRideViewController: UIViewController, UIPickerViewDelegate,UIPickerVie
     var pickerData:[String] = [String]()///  declare new array instance to store data acessable in any method of the class
     var SelectedRideLeaderUser: MyUser?
     var selectedType:String?
-    var otherRiderFirstName:String = ""
-    var otherRiderLastName:String = ""
+    var otherRiderFirstName:String?
+    var otherRiderLastName:String?
+    var otherRiderUID:String?
 
     ///VIEW DID LOAD
     override func viewDidLoad() {
@@ -65,7 +66,20 @@ class HostRideViewController: UIViewController, UIPickerViewDelegate,UIPickerVie
         let tap = UITapGestureRecognizer(target: self, action: #selector(doubleTapped))
            tap.numberOfTapsRequired = 2
            view.addGestureRecognizer(tap)
+        
+        let ridelblTap = UITapGestureRecognizer(target: self, action: #selector(ridelblTapSuege))
+                               ridelblTap.numberOfTapsRequired = 1
+                     RideLocationLabel.addGestureRecognizer(ridelblTap)
+      
     }
+    ///==========================================================
+ @objc func ridelblTapSuege(){
+        print("tapguester Tap")
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "LocationSearchVC")
+        present(controller, animated: true, completion: nil)
+    }
+   
     /// hide the picker on a double tap if its shown
     @objc func doubleTapped() {
         if RideTypePicker.isHidden == false {
@@ -92,6 +106,7 @@ class HostRideViewController: UIViewController, UIPickerViewDelegate,UIPickerVie
     @IBAction func RideLeaderSwitchOn(_ sender: Any) {
        /// hide feild for other user search
         if RideLeaderSwitch.isOn{
+            OtherRideLeaderLbl.isHidden = true
             OtherRideLeaderBtn.isHidden = true
             /// perform databse search for current user info
             let user = Auth.auth().currentUser
@@ -104,7 +119,11 @@ class HostRideViewController: UIViewController, UIPickerViewDelegate,UIPickerVie
             }else{
              /// if im NOT ride lead, Get user to enter another users First and Last Name and do an firebase search for a matching user
             OtherRideLeaderBtn.isHidden = false
-         
+            OtherRideLeaderLbl.isHidden = false
+            /// other rider details to submit to firebase
+//            otherRiderFirstName
+//            otherRiderLastName
+//            otherRiderUID
         }
     }
     
@@ -115,13 +134,8 @@ class HostRideViewController: UIViewController, UIPickerViewDelegate,UIPickerVie
         present(riderSearchVC, animated: true, completion: nil)
     }
     
-    
-    
     @IBAction func RideLeaderSwitchOff(_ sender: Any) {
-        
     }
-    
-
     ///Shows the picker view for ride type
     @IBAction func showPickerTap(_ sender: Any) {
         RideTypePicker.isHidden = false
@@ -131,8 +145,10 @@ class HostRideViewController: UIViewController, UIPickerViewDelegate,UIPickerVie
 extension HostRideViewController:PasstoHostDelegate{
     func passDataToHost(firstName: String, lastName: String, uid: String) {
         print(lastName,firstName,uid)
-        OtherRideLeaderLbl.text = firstName
+        let comboName = "\(firstName)  \(lastName)"
+        OtherRideLeaderLbl.text = "Selected Leader: \(comboName)"
+        otherRiderFirstName = firstName
+        otherRiderLastName = lastName
+        otherRiderUID = uid
     }
-    
-    
 }

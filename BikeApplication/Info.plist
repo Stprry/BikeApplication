@@ -4,6 +4,8 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDocumentTypes</key>
+	<array/>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -20,14 +22,16 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>MKDirectionsApplicationSupportedModes</key>
+	<array/>
 	<key>NSCameraUsageDescription</key>
 	<string>We need acess to your camera to take pictures!</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Project Gnarr needs access to your location in order to record and track your run!</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>this app wants to save photos</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>We want to use your photo libaray</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>please give acsess to location to show rides near you!</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -47,10 +51,6 @@
 			</array>
 		</dict>
 	</dict>
-	<key>UIBackgroundModes</key>
-	<array>
-		<string>location</string>
-	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

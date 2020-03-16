@@ -511,8 +511,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="52n-eq-Apt">
-                                <rect key="frame" x="8" y="79" width="398" height="418"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="52n-eq-Apt">
+                                <rect key="frame" x="8" y="79" width="398" height="499.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ride Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LB1-GX-7tt">
                                         <rect key="frame" x="0.0" y="0.0" width="398" height="20.5"/>
@@ -521,25 +521,25 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please enter a title for the public to see!" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0de-Dx-Gyd">
-                                        <rect key="frame" x="0.0" y="20.5" width="398" height="34"/>
+                                        <rect key="frame" x="0.0" y="29.5" width="398" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ride Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAn-Vv-Zby">
-                                        <rect key="frame" x="0.0" y="54.5" width="398" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="72.5" width="398" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P1G-Vv-Zwf">
-                                        <rect key="frame" x="0.0" y="75" width="398" height="30"/>
+                                        <rect key="frame" x="0.0" y="102" width="398" height="30"/>
                                         <state key="normal" title="Tap here to choose!"/>
                                         <connections>
                                             <action selector="RideTypeBtnTap:" destination="Ct6-zg-DIr" eventType="touchUpInside" id="kU7-pf-IO3"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HTr-po-XOV">
-                                        <rect key="frame" x="0.0" y="105" width="398" height="50"/>
+                                        <rect key="frame" x="0.0" y="141" width="398" height="50"/>
                                         <gestureRecognizers/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -549,54 +549,56 @@
                                         </connections>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Will you be the Ride Leader?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NVm-SI-oHh">
-                                        <rect key="frame" x="0.0" y="155" width="398" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="200" width="398" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6Br-oF-SmV">
-                                        <rect key="frame" x="0.0" y="175.5" width="400" height="31"/>
+                                        <rect key="frame" x="0.0" y="229.5" width="400" height="31"/>
                                         <connections>
                                             <action selector="RideLeaderSwitchOff:" destination="Ct6-zg-DIr" eventType="valueChanged" id="nV5-hp-EKt"/>
                                             <action selector="RideLeaderSwitchOn:" destination="Ct6-zg-DIr" eventType="valueChanged" id="9rI-Xz-gJE"/>
                                         </connections>
                                     </switch>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Xo-Rk-LQq">
-                                        <rect key="frame" x="0.0" y="206.5" width="398" height="30"/>
+                                        <rect key="frame" x="0.0" y="269.5" width="398" height="30"/>
                                         <state key="normal" title="Select Other Ride leader"/>
                                         <connections>
                                             <action selector="OtherRideLeaderTap:" destination="Ct6-zg-DIr" eventType="touchUpInside" id="Bue-4K-5va"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dao-wj-CAU">
-                                        <rect key="frame" x="0.0" y="236.5" width="398" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selected Leader:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dao-wj-CAU">
+                                        <rect key="frame" x="0.0" y="308.5" width="398" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where is the ride?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ko8-Vf-pha">
-                                        <rect key="frame" x="0.0" y="257" width="398" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="338" width="398" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Adress is where to gather before the ride" translatesAutoresizingMaskIntoConstraints="NO" id="A8l-1a-rDd">
-                                        <rect key="frame" x="0.0" y="277.5" width="398" height="56"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </searchBar>
+                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap here to search" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fZS-lJ-WWO">
+                                        <rect key="frame" x="0.0" y="367.5" width="398" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" name="DefaultGreen"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When Is the ride?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A80-vc-VfD">
-                                        <rect key="frame" x="0.0" y="333.5" width="398" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="397" width="398" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tap here to choose a date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UG1-97-xaH">
-                                        <rect key="frame" x="0.0" y="354" width="398" height="34"/>
+                                        <rect key="frame" x="0.0" y="426.5" width="398" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lLJ-bT-wOb">
-                                        <rect key="frame" x="0.0" y="388" width="398" height="30"/>
+                                        <rect key="frame" x="0.0" y="469.5" width="398" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V2x-5J-cax">
                                                 <rect key="frame" x="0.0" y="0.0" width="199" height="30"/>
@@ -654,8 +656,8 @@
                         <outlet property="RideDatePicker" destination="1Fn-7R-otf" id="EJ1-4b-QPP"/>
                         <outlet property="RideLeaderLbl" destination="NVm-SI-oHh" id="xsP-BE-6Sd"/>
                         <outlet property="RideLeaderSwitch" destination="6Br-oF-SmV" id="iEE-Cs-lmk"/>
+                        <outlet property="RideLocationLabel" destination="fZS-lJ-WWO" id="l1I-cg-5Eb"/>
                         <outlet property="RideLocationLbl" destination="ko8-Vf-pha" id="qEg-8s-Lny"/>
-                        <outlet property="RideLocationSearch" destination="A8l-1a-rDd" id="N9H-rE-f5s"/>
                         <outlet property="RideTitleFeild" destination="0de-Dx-Gyd" id="F6d-Pf-GJU"/>
                         <outlet property="RideTitleLbl" destination="LB1-GX-7tt" id="kHX-7x-T69"/>
                         <outlet property="RideTypeBtn" destination="P1G-Vv-Zwf" id="Q01-ac-qYf"/>
@@ -666,14 +668,52 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zt1-ui-DO4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="QYM-jI-8UX">
+                <tapGestureRecognizer id="QYM-jI-8UX" userLabel="ShowpickerTap recognizer">
                     <connections>
                         <action selector="showPickerTap:" destination="Ct6-zg-DIr" id="uz7-d2-8sG"/>
                         <outlet property="delegate" destination="HTr-po-XOV" id="Nui-Wj-sMO"/>
                     </connections>
                 </tapGestureRecognizer>
+                <tapGestureRecognizer id="QNC-lm-VRb">
+                    <connections>
+                        <action selector="RideLoctionTap:" destination="Ct6-zg-DIr" id="Aar-OZ-hOj"/>
+                        <outlet property="delegate" destination="fZS-lJ-WWO" id="gdR-TU-wiW"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="4220" y="1551"/>
+        </scene>
+        <!--Location Search View Controller-->
+        <scene sceneID="EOT-fN-mAo">
+            <objects>
+                <viewController storyboardIdentifier="LocationSearchVC" id="gOj-PK-1IQ" customClass="LocationSearchViewController" customModule="BikeApplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BAQ-hC-FEW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsBuildings="NO" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ylq-6n-mgM">
+                                <rect key="frame" x="0.0" y="20" width="414" height="842"/>
+                                <connections>
+                                    <outlet property="delegate" destination="gOj-PK-1IQ" id="KJG-ad-ban"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Ylq-6n-mgM" firstAttribute="bottom" secondItem="oks-yB-WSC" secondAttribute="bottom" id="7sJ-il-jlM"/>
+                            <constraint firstItem="Ylq-6n-mgM" firstAttribute="top" secondItem="BAQ-hC-FEW" secondAttribute="top" constant="20" symbolic="YES" id="fFK-1V-TaY"/>
+                            <constraint firstItem="Ylq-6n-mgM" firstAttribute="leading" secondItem="oks-yB-WSC" secondAttribute="leading" id="oAA-dp-XUF"/>
+                            <constraint firstItem="oks-yB-WSC" firstAttribute="trailing" secondItem="Ylq-6n-mgM" secondAttribute="trailing" id="zfN-0s-TG8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="oks-yB-WSC"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="Ylq-6n-mgM" id="7eI-eU-CYu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eDw-05-eNw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5301.449275362319" y="1655.3571428571429"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0Cw-pz-MLM">
