@@ -686,29 +686,48 @@
         <!--Location Search View Controller-->
         <scene sceneID="EOT-fN-mAo">
             <objects>
-                <viewController storyboardIdentifier="LocationSearchVC" id="gOj-PK-1IQ" customClass="LocationSearchViewController" customModule="BikeApplication" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LocationSearchVC" wantsFullScreenLayout="YES" id="gOj-PK-1IQ" customClass="LocationSearchViewController" customModule="BikeApplication" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BAQ-hC-FEW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsBuildings="NO" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ylq-6n-mgM">
-                                <rect key="frame" x="0.0" y="20" width="414" height="842"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="816"/>
                                 <connections>
                                     <outlet property="delegate" destination="gOj-PK-1IQ" id="KJG-ad-ban"/>
                                 </connections>
                             </mapView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mappin" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Rfm-px-YRJ">
+                                <rect key="frame" x="187" y="407.5" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="5ai-8U-P6J"/>
+                                    <constraint firstAttribute="height" constant="40" id="puh-DX-qDa"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ues-BV-hV3">
+                                <rect key="frame" x="0.0" y="824" width="414" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Ylq-6n-mgM" firstAttribute="bottom" secondItem="oks-yB-WSC" secondAttribute="bottom" id="7sJ-il-jlM"/>
-                            <constraint firstItem="Ylq-6n-mgM" firstAttribute="top" secondItem="BAQ-hC-FEW" secondAttribute="top" constant="20" symbolic="YES" id="fFK-1V-TaY"/>
+                            <constraint firstItem="Ues-BV-hV3" firstAttribute="leading" secondItem="oks-yB-WSC" secondAttribute="leading" id="6Ga-gO-fYB"/>
+                            <constraint firstItem="Ylq-6n-mgM" firstAttribute="bottom" secondItem="oks-yB-WSC" secondAttribute="bottom" constant="-46" id="7sJ-il-jlM"/>
+                            <constraint firstItem="Rfm-px-YRJ" firstAttribute="centerX" secondItem="BAQ-hC-FEW" secondAttribute="centerX" id="Dii-oI-2ep"/>
+                            <constraint firstItem="Ues-BV-hV3" firstAttribute="top" secondItem="Ylq-6n-mgM" secondAttribute="bottom" constant="8" id="JTn-wi-PG3"/>
+                            <constraint firstItem="Ylq-6n-mgM" firstAttribute="top" secondItem="BAQ-hC-FEW" secondAttribute="top" id="fFK-1V-TaY"/>
                             <constraint firstItem="Ylq-6n-mgM" firstAttribute="leading" secondItem="oks-yB-WSC" secondAttribute="leading" id="oAA-dp-XUF"/>
+                            <constraint firstItem="Ues-BV-hV3" firstAttribute="trailing" secondItem="oks-yB-WSC" secondAttribute="trailing" id="uur-by-hEL"/>
+                            <constraint firstItem="Rfm-px-YRJ" firstAttribute="centerY" secondItem="BAQ-hC-FEW" secondAttribute="centerY" constant="-20" id="vgD-11-Nae"/>
                             <constraint firstItem="oks-yB-WSC" firstAttribute="trailing" secondItem="Ylq-6n-mgM" secondAttribute="trailing" id="zfN-0s-TG8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="oks-yB-WSC"/>
                     </view>
                     <connections>
-                        <outlet property="mapView" destination="Ylq-6n-mgM" id="7eI-eU-CYu"/>
+                        <outlet property="adressLabel" destination="Ues-BV-hV3" id="DUu-B2-xNh"/>
+                        <outlet property="mapView" destination="Ylq-6n-mgM" id="PeC-GM-Zr0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eDw-05-eNw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -901,6 +920,7 @@
         <image name="02" width="125" height="125"/>
         <image name="house.fill" catalog="system" width="64" height="52"/>
         <image name="map.fill" catalog="system" width="64" height="56"/>
+        <image name="mappin" catalog="system" width="52" height="64"/>
         <image name="person.circle" catalog="system" width="64" height="60"/>
         <image name="photo.fill" catalog="system" width="64" height="46"/>
         <namedColor name="DefaultGreen">
