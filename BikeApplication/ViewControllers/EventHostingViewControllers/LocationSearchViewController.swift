@@ -9,20 +9,29 @@
 import UIKit
 import MapKit
 import CoreLocation
-
+protocol AdressPassbackDelegate {
+   func passAdress(adress:String)
+}
 class LocationSearchViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var adressLabel: UILabel!
+    @IBOutlet weak var SaveBtn: UIButton!
     
     let locationManager = CLLocationManager()
     let regionInMeters: Double = 10000
     var previousLocation: CLLocation?
-
+    var passAdressDelegate: AdressPassbackDelegate!
     override func viewDidLoad() {
         super.viewDidLoad()
         checkLocationServices()
+        SaveBtn.layer.cornerRadius = SaveBtn.frame.size.height/2
     }
     
+    @IBAction func SaveBtnTap(_ sender: Any) {
+        let adress = adressLabel.text ?? ""
+        passAdressDelegate.passAdress(adress: adress)
+        dismiss(animated: true, completion: nil)
+    }
     
     func setupLocationManager() {
         locationManager.delegate = self

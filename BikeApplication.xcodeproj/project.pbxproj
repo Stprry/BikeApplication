@@ -23,6 +23,7 @@
 		7B27E4B2241947AF00105E97 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B27E4B1241947AF00105E97 /* ProfileViewController.swift */; };
 		7B27E4B4241F790C00105E97 /* LocationSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B27E4B3241F790C00105E97 /* LocationSearchViewController.swift */; };
 		7B27E4B6241F962F00105E97 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B27E4B5241F962F00105E97 /* MapKit.framework */; };
+		7B27E4B82423EC8100105E97 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B27E4B72423EC8100105E97 /* PopUpViewController.swift */; };
 		7B292F0023FAFFDD00E656B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B292EFF23FAFFDD00E656B1 /* AppDelegate.swift */; };
 		7B292F0223FAFFDD00E656B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B292F0123FAFFDD00E656B1 /* SceneDelegate.swift */; };
 		7B292F0423FAFFDD00E656B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B292F0323FAFFDD00E656B1 /* ViewController.swift */; };
@@ -66,6 +67,7 @@
 		7B27E4B1241947AF00105E97 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		7B27E4B3241F790C00105E97 /* LocationSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchViewController.swift; sourceTree = "<group>"; };
 		7B27E4B5241F962F00105E97 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		7B27E4B72423EC8100105E97 /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		7B292EFC23FAFFDD00E656B1 /* BikeApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BikeApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B292EFF23FAFFDD00E656B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B292F0123FAFFDD00E656B1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				7B0D499A241404CA00FD5A60 /* SnapshotExtensions.swift */,
 				7B0D499C241404FD00FD5A60 /* MyUser.swift */,
 				7B27E4B3241F790C00105E97 /* LocationSearchViewController.swift */,
+				7B27E4B72423EC8100105E97 /* PopUpViewController.swift */,
 			);
 			path = EventHostingViewControllers;
 			sourceTree = "<group>";
@@ -406,6 +409,7 @@
 				7BF5336B240D67DC00ECD598 /* StoryboardSupport.swift in Sources */,
 				7B292F0023FAFFDD00E656B1 /* AppDelegate.swift in Sources */,
 				7B0D499424105FDC00FD5A60 /* RootViewController.swift in Sources */,
+				7B27E4B82423EC8100105E97 /* PopUpViewController.swift in Sources */,
 				7B0D499B241404CA00FD5A60 /* SnapshotExtensions.swift in Sources */,
 				7BF53373240D7C2F00ECD598 /* LocationManager.swift in Sources */,
 				7B292F35240010B900E656B1 /* MainTabBarController.swift in Sources */,

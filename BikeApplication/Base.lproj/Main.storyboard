@@ -441,6 +441,81 @@
             </objects>
             <point key="canvasLocation" x="4061" y="2391"/>
         </scene>
+        <!--Pop Up View Controller-->
+        <scene sceneID="4f4-qD-vKR">
+            <objects>
+                <viewController storyboardIdentifier="PopupID" modalPresentationStyle="overCurrentContext" id="j6x-Sg-Pda" customClass="PopUpViewController" customModule="BikeApplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="KWD-8m-gWu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vzl-pm-wEx">
+                                <rect key="frame" x="20" y="320" width="374" height="241"/>
+                                <subviews>
+                                    <datePicker opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ynt-MD-PKo">
+                                        <rect key="frame" x="0.0" y="53" width="374" height="188"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <connections>
+                                            <action selector="dateTimeSelect:" destination="j6x-Sg-Pda" eventType="valueChanged" id="Fyh-IX-2Ha"/>
+                                        </connections>
+                                    </datePicker>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y8M-bh-ocV">
+                                        <rect key="frame" x="0.0" y="211" width="374" height="30"/>
+                                        <color key="backgroundColor" name="DefaultGreen"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <state key="normal" title="Save Date">
+                                            <color key="titleColor" red="0.97279256579999995" green="0.97293204069999994" blue="0.97276204820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="saveDateTap:" destination="j6x-Sg-Pda" eventType="touchUpInside" id="0lz-gF-B1P"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TBQ-GZ-58L">
+                                        <rect key="frame" x="0.0" y="8" width="374" height="44"/>
+                                        <color key="backgroundColor" red="0.0" green="0.57254901960000004" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="1hJ-as-kPu"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                        <color key="textColor" red="0.97279256579999995" green="0.97293204069999994" blue="0.97276204820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="TBQ-GZ-58L" firstAttribute="leading" secondItem="vzl-pm-wEx" secondAttribute="leading" id="2ui-Rd-Z9u"/>
+                                    <constraint firstItem="Y8M-bh-ocV" firstAttribute="leading" secondItem="ynt-MD-PKo" secondAttribute="leading" id="4A7-uQ-tbo"/>
+                                    <constraint firstItem="Y8M-bh-ocV" firstAttribute="trailing" secondItem="ynt-MD-PKo" secondAttribute="trailing" id="4sw-yt-Eqe"/>
+                                    <constraint firstItem="ynt-MD-PKo" firstAttribute="top" secondItem="TBQ-GZ-58L" secondAttribute="bottom" constant="1" id="CJp-QI-nS6"/>
+                                    <constraint firstAttribute="bottom" secondItem="Y8M-bh-ocV" secondAttribute="bottom" id="DaF-dT-42e"/>
+                                    <constraint firstItem="ynt-MD-PKo" firstAttribute="width" secondItem="TBQ-GZ-58L" secondAttribute="width" id="NYN-de-ruA"/>
+                                    <constraint firstItem="Y8M-bh-ocV" firstAttribute="bottom" secondItem="ynt-MD-PKo" secondAttribute="bottom" id="eUe-Su-nsO"/>
+                                    <constraint firstItem="TBQ-GZ-58L" firstAttribute="top" secondItem="vzl-pm-wEx" secondAttribute="topMargin" id="knG-tJ-G7Y"/>
+                                    <constraint firstItem="TBQ-GZ-58L" firstAttribute="centerX" secondItem="vzl-pm-wEx" secondAttribute="centerX" id="sf7-UO-GYz"/>
+                                    <constraint firstItem="TBQ-GZ-58L" firstAttribute="leading" secondItem="ynt-MD-PKo" secondAttribute="leading" id="uNM-d0-ocD"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.97279256579999995" green="0.97293204069999994" blue="0.97276204820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="emC-zQ-wA2" firstAttribute="bottom" secondItem="vzl-pm-wEx" secondAttribute="bottom" constant="301" id="3Oz-0P-YsM"/>
+                            <constraint firstItem="vzl-pm-wEx" firstAttribute="leading" secondItem="emC-zQ-wA2" secondAttribute="leading" constant="20" id="Kgu-eK-nC5"/>
+                            <constraint firstItem="vzl-pm-wEx" firstAttribute="top" secondItem="emC-zQ-wA2" secondAttribute="top" constant="276" id="Mkc-M5-UWB"/>
+                            <constraint firstItem="emC-zQ-wA2" firstAttribute="trailing" secondItem="vzl-pm-wEx" secondAttribute="trailing" constant="20" id="Tha-0o-nSE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="emC-zQ-wA2"/>
+                    </view>
+                    <connections>
+                        <outlet property="datePicker" destination="ynt-MD-PKo" id="jac-Po-nMB"/>
+                        <outlet property="saveBtn" destination="Y8M-bh-ocV" id="LzK-ER-7qP"/>
+                        <outlet property="titleLabel" destination="TBQ-GZ-58L" id="joo-HS-mNC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G8h-E0-RJe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5165.217391304348" y="2203.7946428571427"/>
+        </scene>
         <!--Other Ride Search View Controller-->
         <scene sceneID="AzO-kf-fxT">
             <objects>
@@ -512,7 +587,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="52n-eq-Apt">
-                                <rect key="frame" x="8" y="79" width="398" height="499.5"/>
+                                <rect key="frame" x="8" y="79" width="398" height="456.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ride Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LB1-GX-7tt">
                                         <rect key="frame" x="0.0" y="0.0" width="398" height="20.5"/>
@@ -520,8 +595,9 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please enter a title for the public to see!" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0de-Dx-Gyd">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please enter a title for the public to see!" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0de-Dx-Gyd">
                                         <rect key="frame" x="0.0" y="29.5" width="398" height="34"/>
+                                        <color key="textColor" name="DefaultGreen"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -533,7 +609,9 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P1G-Vv-Zwf">
                                         <rect key="frame" x="0.0" y="102" width="398" height="30"/>
-                                        <state key="normal" title="Tap here to choose!"/>
+                                        <state key="normal" title="Tap here to choose!">
+                                            <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="RideTypeBtnTap:" destination="Ct6-zg-DIr" eventType="touchUpInside" id="kU7-pf-IO3"/>
                                         </connections>
@@ -541,8 +619,11 @@
                                     <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HTr-po-XOV">
                                         <rect key="frame" x="0.0" y="141" width="398" height="50"/>
                                         <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Chs-PM-IAU"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" name="DefaultGreen"/>
                                         <nil key="highlightedColor"/>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="QYM-jI-8UX" appends="YES" id="YuE-P5-EWN"/>
@@ -563,42 +644,45 @@
                                     </switch>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Xo-Rk-LQq">
                                         <rect key="frame" x="0.0" y="269.5" width="398" height="30"/>
-                                        <state key="normal" title="Select Other Ride leader"/>
+                                        <state key="normal" title="Select Other Ride leader">
+                                            <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="OtherRideLeaderTap:" destination="Ct6-zg-DIr" eventType="touchUpInside" id="Bue-4K-5va"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selected Leader:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dao-wj-CAU">
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dao-wj-CAU">
+                                        <rect key="frame" x="0.0" y="304" width="398" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" name="DefaultGreen"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where is the ride?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ko8-Vf-pha">
                                         <rect key="frame" x="0.0" y="308.5" width="398" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where is the ride?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ko8-Vf-pha">
+                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap here to search" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fZS-lJ-WWO">
                                         <rect key="frame" x="0.0" y="338" width="398" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap here to search" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fZS-lJ-WWO">
-                                        <rect key="frame" x="0.0" y="367.5" width="398" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" name="DefaultGreen"/>
+                                        <color key="textColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When Is the ride?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A80-vc-VfD">
-                                        <rect key="frame" x="0.0" y="397" width="398" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="367.5" width="398" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tap here to choose a date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UG1-97-xaH">
-                                        <rect key="frame" x="0.0" y="426.5" width="398" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
+                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap here to select!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r0R-Iz-Swh">
+                                        <rect key="frame" x="0.0" y="397" width="398" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lLJ-bT-wOb">
-                                        <rect key="frame" x="0.0" y="469.5" width="398" height="30"/>
+                                        <rect key="frame" x="0.0" y="426.5" width="398" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V2x-5J-cax">
                                                 <rect key="frame" x="0.0" y="0.0" width="199" height="30"/>
@@ -608,52 +692,41 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sYr-u3-Drz">
                                                 <rect key="frame" x="199" y="0.0" width="199" height="30"/>
                                                 <color key="tintColor" name="DefaultGreen"/>
-                                                <state key="normal" title="Set up future Ride"/>
+                                                <state key="normal" title="Set up future Ride">
+                                                    <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
                                             </button>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="sYr-u3-Drz" firstAttribute="width" secondItem="V2x-5J-cax" secondAttribute="width" id="kaP-PI-RqH"/>
+                                            <constraint firstItem="sYr-u3-Drz" firstAttribute="width" secondItem="V2x-5J-cax" secondAttribute="width" id="qLy-9W-Bes"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
                             </stackView>
                             <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LPd-Bh-krH">
-                                <rect key="frame" x="10" y="594" width="394" height="216"/>
+                                <rect key="frame" x="10" y="551" width="394" height="216"/>
                                 <gestureRecognizers/>
                             </pickerView>
-                            <datePicker hidden="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="1Fn-7R-otf">
-                                <rect key="frame" x="10" y="588" width="394" height="220"/>
-                                <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="220" id="KSE-Ay-4zr"/>
-                                </constraints>
-                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="52n-eq-Apt" firstAttribute="top" secondItem="zX0-NX-vNJ" secondAttribute="top" constant="79" id="01e-2S-Lw9"/>
-                            <constraint firstItem="52n-eq-Apt" firstAttribute="leading" secondItem="zX0-NX-vNJ" secondAttribute="leading" constant="8" id="E83-XG-H0J"/>
-                            <constraint firstItem="1Fn-7R-otf" firstAttribute="trailing" secondItem="LPd-Bh-krH" secondAttribute="trailing" id="FTz-dz-2d9"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="LPd-Bh-krH" secondAttribute="bottom" constant="-2" id="JM1-Kc-YNj"/>
-                            <constraint firstItem="zX0-NX-vNJ" firstAttribute="trailing" secondItem="52n-eq-Apt" secondAttribute="trailing" constant="8" id="LBb-JM-0Or"/>
-                            <constraint firstItem="1Fn-7R-otf" firstAttribute="leading" secondItem="LPd-Bh-krH" secondAttribute="leading" id="X15-xJ-Rzx"/>
-                            <constraint firstItem="1Fn-7R-otf" firstAttribute="leading" secondItem="zX0-NX-vNJ" secondAttribute="leading" constant="10" id="e1I-Js-DW0"/>
-                            <constraint firstItem="1Fn-7R-otf" firstAttribute="bottom" secondItem="zX0-NX-vNJ" secondAttribute="bottom" id="eZq-d7-2aH"/>
-                            <constraint firstItem="zX0-NX-vNJ" firstAttribute="trailing" secondItem="52n-eq-Apt" secondAttribute="trailing" constant="8" id="gqP-CU-eJp"/>
-                            <constraint firstItem="1Fn-7R-otf" firstAttribute="centerX" secondItem="52n-eq-Apt" secondAttribute="centerX" id="hez-Js-UTq"/>
-                            <constraint firstItem="52n-eq-Apt" firstAttribute="leading" secondItem="zX0-NX-vNJ" secondAttribute="leading" constant="8" id="lpk-CE-2hy"/>
+                            <constraint firstItem="52n-eq-Apt" firstAttribute="centerX" secondItem="LPd-Bh-krH" secondAttribute="centerX" id="4xe-q5-4J5"/>
+                            <constraint firstItem="LPd-Bh-krH" firstAttribute="leading" secondItem="zX0-NX-vNJ" secondAttribute="leading" constant="10" id="9ee-ow-2BT"/>
+                            <constraint firstItem="52n-eq-Apt" firstAttribute="centerX" secondItem="KnD-YN-Myv" secondAttribute="centerX" id="D1P-Se-u42"/>
+                            <constraint firstItem="52n-eq-Apt" firstAttribute="leading" secondItem="zX0-NX-vNJ" secondAttribute="leading" constant="8" id="MQo-qe-UWD"/>
+                            <constraint firstItem="52n-eq-Apt" firstAttribute="top" secondItem="zX0-NX-vNJ" secondAttribute="top" constant="79" id="hh0-uo-vGg"/>
+                            <constraint firstItem="LPd-Bh-krH" firstAttribute="top" secondItem="52n-eq-Apt" secondAttribute="bottom" constant="15.5" id="tuw-6n-mDk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zX0-NX-vNJ"/>
                     </view>
                     <navigationItem key="navigationItem" id="XhH-IK-7y7"/>
                     <connections>
                         <outlet property="CancelRideBtn" destination="V2x-5J-cax" id="QVG-nl-byb"/>
+                        <outlet property="DateFeild" destination="r0R-Iz-Swh" id="8qv-DE-Stl"/>
                         <outlet property="OtherRideLeaderBtn" destination="0Xo-Rk-LQq" id="gHB-Cb-5qE"/>
                         <outlet property="OtherRideLeaderLbl" destination="Dao-wj-CAU" id="B7f-1S-fNR"/>
-                        <outlet property="RideDateFeild" destination="UG1-97-xaH" id="aR1-Ee-Bg8"/>
                         <outlet property="RideDateLbl" destination="A80-vc-VfD" id="Bsj-8R-HAs"/>
-                        <outlet property="RideDatePicker" destination="1Fn-7R-otf" id="EJ1-4b-QPP"/>
                         <outlet property="RideLeaderLbl" destination="NVm-SI-oHh" id="xsP-BE-6Sd"/>
                         <outlet property="RideLeaderSwitch" destination="6Br-oF-SmV" id="iEE-Cs-lmk"/>
                         <outlet property="RideLocationLabel" destination="fZS-lJ-WWO" id="l1I-cg-5Eb"/>
@@ -704,12 +777,22 @@
                                     <constraint firstAttribute="height" constant="40" id="puh-DX-qDa"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ues-BV-hV3">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adress" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ues-BV-hV3">
                                 <rect key="frame" x="0.0" y="824" width="414" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fkt-J4-C4y">
+                                <rect key="frame" x="0.0" y="782" width="414" height="30"/>
+                                <color key="backgroundColor" name="DefaultGreen"/>
+                                <state key="normal" title="Save Location">
+                                    <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="SaveBtnTap:" destination="gOj-PK-1IQ" eventType="touchUpInside" id="DRw-n2-noi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -717,7 +800,10 @@
                             <constraint firstItem="Ylq-6n-mgM" firstAttribute="bottom" secondItem="oks-yB-WSC" secondAttribute="bottom" constant="-46" id="7sJ-il-jlM"/>
                             <constraint firstItem="Rfm-px-YRJ" firstAttribute="centerX" secondItem="BAQ-hC-FEW" secondAttribute="centerX" id="Dii-oI-2ep"/>
                             <constraint firstItem="Ues-BV-hV3" firstAttribute="top" secondItem="Ylq-6n-mgM" secondAttribute="bottom" constant="8" id="JTn-wi-PG3"/>
+                            <constraint firstItem="oks-yB-WSC" firstAttribute="trailing" secondItem="fkt-J4-C4y" secondAttribute="trailing" id="RBm-Gp-14P"/>
                             <constraint firstItem="Ylq-6n-mgM" firstAttribute="top" secondItem="BAQ-hC-FEW" secondAttribute="top" id="fFK-1V-TaY"/>
+                            <constraint firstItem="fkt-J4-C4y" firstAttribute="leading" secondItem="oks-yB-WSC" secondAttribute="leading" id="fzq-az-sht"/>
+                            <constraint firstItem="Ues-BV-hV3" firstAttribute="top" secondItem="fkt-J4-C4y" secondAttribute="bottom" constant="12" id="ky1-Dr-CXW"/>
                             <constraint firstItem="Ylq-6n-mgM" firstAttribute="leading" secondItem="oks-yB-WSC" secondAttribute="leading" id="oAA-dp-XUF"/>
                             <constraint firstItem="Ues-BV-hV3" firstAttribute="trailing" secondItem="oks-yB-WSC" secondAttribute="trailing" id="uur-by-hEL"/>
                             <constraint firstItem="Rfm-px-YRJ" firstAttribute="centerY" secondItem="BAQ-hC-FEW" secondAttribute="centerY" constant="-20" id="vgD-11-Nae"/>
@@ -726,13 +812,14 @@
                         <viewLayoutGuide key="safeArea" id="oks-yB-WSC"/>
                     </view>
                     <connections>
+                        <outlet property="SaveBtn" destination="fkt-J4-C4y" id="NXs-xS-AfG"/>
                         <outlet property="adressLabel" destination="Ues-BV-hV3" id="DUu-B2-xNh"/>
                         <outlet property="mapView" destination="Ylq-6n-mgM" id="PeC-GM-Zr0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eDw-05-eNw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5301.449275362319" y="1655.3571428571429"/>
+            <point key="canvasLocation" x="5265" y="1494"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0Cw-pz-MLM">

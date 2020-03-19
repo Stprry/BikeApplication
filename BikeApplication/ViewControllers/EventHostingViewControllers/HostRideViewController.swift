@@ -35,15 +35,16 @@ class HostRideViewController: UIViewController, UIPickerViewDelegate,UIPickerVie
     @IBOutlet weak var RideLocationLbl: UILabel!
     @IBOutlet weak var RideLocationLabel: UILabel!
     @IBOutlet weak var RideDateLbl: UILabel!
-    @IBOutlet weak var RideDateFeild: UITextField!
     @IBOutlet weak var CancelRideBtn: UIButton!
     @IBOutlet weak var SubmitBtn: UIButton!
     @IBOutlet weak var RideTypePicker: UIPickerView!
-    @IBOutlet weak var RideDatePicker: UIDatePicker!
     @IBOutlet weak var RideTypeSelection: UILabel!
     @IBOutlet weak var OtherRideLeaderLbl: UILabel!
-    
+    @IBOutlet weak var DateFeild: UILabel!
     /* https://codewithchris.com/uipickerview-example/ */
+    ///private var ( to this clas)
+    ///
+    ///public var (to this class)
     var pickerData:[String] = [String]()///  declare new array instance to store data acessable in any method of the class
     var SelectedRideLeaderUser: MyUser?
     var selectedType:String?
@@ -61,8 +62,10 @@ class HostRideViewController: UIViewController, UIPickerViewDelegate,UIPickerVie
         ///input data into array
         pickerData = ["Down Hill","Enduro","XC","Dirt Jumps","Chill Ride"]
         /// hide other leader feild on load
-       // OtherRideLeaderBtn.isHidden = true
         RideTypeSelection.isHidden = true
+        
+        
+        ///*CUSTOM TAP GEUSTER RECOGNISERS*
         let tap = UITapGestureRecognizer(target: self, action: #selector(doubleTapped))
            tap.numberOfTapsRequired = 2
            view.addGestureRecognizer(tap)
@@ -70,22 +73,36 @@ class HostRideViewController: UIViewController, UIPickerViewDelegate,UIPickerVie
         let ridelblTap = UITapGestureRecognizer(target: self, action: #selector(ridelblTapSuege))
                                ridelblTap.numberOfTapsRequired = 1
                      RideLocationLabel.addGestureRecognizer(ridelblTap)
-      
+        
+        let rideDateTap = UITapGestureRecognizer(target: self, action: #selector(tapDateLabel))
+                                      rideDateTap.numberOfTapsRequired = 1
+                            DateFeild.addGestureRecognizer(rideDateTap)
     }
-    ///==========================================================
+    
+    ///*@OJC FUNCTIONS*
+    /// func to seuge to location search
  @objc func ridelblTapSuege(){
         print("tapguester Tap")
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "LocationSearchVC")
-        present(controller, animated: true, completion: nil)
+        let locationVC = storyboard?.instantiateViewController(withIdentifier: "LocationSearchVC") as! LocationSearchViewController
+        locationVC.passAdressDelegate = self
+        present(locationVC, animated: true, completion: nil)
     }
-   
     /// hide the picker on a double tap if its shown
-    @objc func doubleTapped() {
+    @objc func doubleTapped(gestureRecognizer: UITapGestureRecognizer) {
         if RideTypePicker.isHidden == false {
             RideTypePicker.isHidden = true
         }
     }
+    @objc func tapDateLabel(tap:UITapGestureRecognizer){
+        // show picker popup here!
+        print("test tap")
+        let popUpVC =  storyboard?.instantiateViewController(withIdentifier: "PopupID") as! PopUpViewController
+        popUpVC.modalPresentationStyle = .overCurrentContext
+        popUpVC.dateDelegate = self
+        present(popUpVC, animated: true, completion: nil)
+    }
+    
+    ///* FORM FUNCTIONS*
     /// The data to return for the row and component (column) that's being passed in
      func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
          return pickerData[row]
@@ -96,6 +113,8 @@ class HostRideViewController: UIViewController, UIPickerViewDelegate,UIPickerVie
         RideTypeSelection.text = pickerData[row]
         selectedType = pickerData[row]
       }
+    
+    ///*ACTION FUNCTIONS FROM BUTTOSN LABELS ECT*
     /// show corrisponding pickers and labels when tapped
     @IBAction func RideTypeBtnTap(_ sender: Any) {
          RideTypePicker.isHidden = false
@@ -132,10 +151,12 @@ class HostRideViewController: UIViewController, UIPickerViewDelegate,UIPickerVie
         let riderSearchVC = storyboard?.instantiateViewController(identifier: "ORSearchVC") as! OtherRideSearchViewController
               riderSearchVC.passDelegate = self
         present(riderSearchVC, animated: true, completion: nil)
-    }
+        OtherRideLeaderLbl.isHidden = false
+    }   
     
     @IBAction func RideLeaderSwitchOff(_ sender: Any) {
     }
+    
     ///Shows the picker view for ride type
     @IBAction func showPickerTap(_ sender: Any) {
         RideTypePicker.isHidden = false
@@ -146,9 +167,22 @@ extension HostRideViewController:PasstoHostDelegate{
     func passDataToHost(firstName: String, lastName: String, uid: String) {
         print(lastName,firstName,uid)
         let comboName = "\(firstName)  \(lastName)"
-        OtherRideLeaderLbl.text = "Selected Leader: \(comboName)"
+        OtherRideLeaderLbl.text = "\(comboName)"
+        OtherRideLeaderLbl.textColor = UIColor(named: "DefaultGreen")
         otherRiderFirstName = firstName
         otherRiderLastName = lastName
         otherRiderUID = uid
+    }
+}
+extension HostRideViewController:AdressPassbackDelegate{
+    func passAdress(adress: String) {
+        RideLocationLabel.text = "Ride Location: \(adress)"
+        RideLocationLabel.textColor = UIColor(named: "DefaultGreen")
+    }
+}
+extension HostRideViewController:DateSelectionDelegate{
+    func dateSelected(date: String) {
+        DateFeild.text = date
+        DateFeild.textColor = UIColor(named: "DefaultGreen")
     }
 }
