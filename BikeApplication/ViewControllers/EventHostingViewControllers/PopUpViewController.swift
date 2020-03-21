@@ -18,12 +18,13 @@ class PopUpViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var saveBtn: UIButton!
+    let currentDateTIme = Date() 
     
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        datePicker.minimumDate = currentDateTIme
+
     }
     
     @IBAction func dateTimeSelect(_ sender: Any) {
@@ -34,9 +35,14 @@ class PopUpViewController: UIViewController {
     }
     
     @IBAction func saveDateTap(_ sender: UIButton) {
-        dateDelegate.dateSelected(date: passDate)
-        dismiss(animated: true, completion: nil)
+        if datePicker.date <= currentDateTIme {
+            let alert = UIAlertController(title: "Please select a date further from current time!", message: "your selcted time is either in the past or is the current time please select different time!", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "change date now", style: .cancel, handler: nil))
+            self.present(alert,animated: true)
+        }else{
+            dateDelegate.dateSelected(date: passDate)
+            dismiss(animated: true, completion: nil)
+        }
     }
-
 }
 //47,173,99
