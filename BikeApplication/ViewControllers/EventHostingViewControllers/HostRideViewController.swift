@@ -56,6 +56,8 @@ class HostRideViewController: UIViewController, UIPickerViewDelegate,UIPickerVie
     var otherRiderUID:String?
     var rideAdress:String?
     var othercomboName:String?
+    var rideCoOrdinateX:Double?
+    var rideCordinateY:Double?
     
     ///*VIEW DID LOAD*
     override func viewDidLoad() {
@@ -137,7 +139,7 @@ class HostRideViewController: UIViewController, UIPickerViewDelegate,UIPickerVie
             rideLeader = othercomboName!
             uid = otherRiderUID!
         }
-        db.collection("Events").addDocument(data: ["rideName":rideName!,"rideType":rideType!,"rideLeader":rideLeader,"rideLeaderUID":uid,"rideLocation":rideLocation!,"rideDate":date!]) { (error) in
+        db.collection("Events").addDocument(data: ["rideName":rideName!,"rideType":rideType!,"rideLeader":rideLeader,"rideLeaderUID":uid,"rideLocation":rideLocation!,"rideDate":date!,"rideXCordinate":rideCoOrdinateX!,"rideYCordinate":rideCordinateY!]) { (error) in
             if error != nil{
                 // error in database show error
                 print("Something went wrong on our servers, First name or last name had something wrong")
@@ -181,6 +183,7 @@ class HostRideViewController: UIViewController, UIPickerViewDelegate,UIPickerVie
           DispatchQueue.main.asyncAfter(deadline: when){
             // code with delay
             alert.dismiss(animated: true, completion: nil)
+            NotificationCenter.default.post(name: Notification.Name("refresh"), object: nil)
             self.dismiss(animated: true, completion: nil)
           }
         }
@@ -214,10 +217,12 @@ extension HostRideViewController:PasstoHostDelegate{
 }
 
 extension HostRideViewController:AdressPassbackDelegate{
-    func passAdress(adress: String) {
-        RideLocationLabel.text = "Ride Location: \(adress)"
-        RideLocationLabel.textColor = UIColor(named: "DefaultGreen")
-        rideAdress = adress
+    func passAdress(adress: String, xCoOrd: Double, yCoOrd: Double) {
+            RideLocationLabel.text = "Ride Location: \(adress)"
+            RideLocationLabel.textColor = UIColor(named: "DefaultGreen")
+            rideAdress = adress
+            rideCordinateY = yCoOrd
+            rideCoOrdinateX = xCoOrd
     }
 }
 

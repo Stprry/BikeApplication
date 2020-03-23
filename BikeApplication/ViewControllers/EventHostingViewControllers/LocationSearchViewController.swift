@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import CoreLocation
 protocol AdressPassbackDelegate {
-   func passAdress(adress:String)
+    func passAdress(adress:String,xCoOrd:Double,yCoOrd:Double)
 }
 class LocationSearchViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
@@ -21,6 +21,9 @@ class LocationSearchViewController: UIViewController {
     let regionInMeters: Double = 10000
     var previousLocation: CLLocation?
     var passAdressDelegate: AdressPassbackDelegate!
+    var xCoOrd:Double?
+    var yCoOrd:Double?
+    var coOrdinates:Double?
     override func viewDidLoad() {
         super.viewDidLoad()
         checkLocationServices()
@@ -29,7 +32,7 @@ class LocationSearchViewController: UIViewController {
     
     @IBAction func SaveBtnTap(_ sender: Any) {
         let adress = adressLabel.text ?? ""
-        passAdressDelegate.passAdress(adress: adress)
+        passAdressDelegate.passAdress(adress: adress,xCoOrd: xCoOrd!,yCoOrd: yCoOrd!)
         dismiss(animated: true, completion: nil)
     }
     
@@ -38,14 +41,12 @@ class LocationSearchViewController: UIViewController {
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
     }
     
-    
     func centerViewOnUserLocation() {
         if let location = locationManager.location?.coordinate {
             let region = MKCoordinateRegion.init(center: location, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
             mapView.setRegion(region, animated: true)
         }
     }
-    
     
     func checkLocationServices() {
         if CLLocationManager.locationServicesEnabled() {
@@ -82,21 +83,12 @@ class LocationSearchViewController: UIViewController {
     func getCenterLocation(for mapView: MKMapView) -> CLLocation {
            let latitude = mapView.centerCoordinate.latitude
            let longitude = mapView.centerCoordinate.longitude
-           
            return CLLocation(latitude: latitude, longitude: longitude)
        }
 }
 
 
 extension LocationSearchViewController: CLLocationManagerDelegate {
-    
-//    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-//        guard let location = locations.last else { return }
-//        let region = MKCoordinateRegion.init(center: location.coordinate, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
-//        mapView.setRegion(region, animated: true)
-//    }
-    
-    
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         checkLocationAuthorization()
     }
@@ -125,7 +117,8 @@ extension LocationSearchViewController: MKMapViewDelegate{
              let roadNum = placemark.subThoroughfare ?? ""
              let roadName = placemark.thoroughfare ?? ""
              let postcode = placemark.postalCode ?? ""
-            
+            self.yCoOrd = placemark.location?.coordinate.latitude
+            self.xCoOrd=placemark.location?.coordinate.longitude
             DispatchQueue.main.async {
                 self.adressLabel.text = "\(roadNum) \(roadName) \(postcode)"
             }

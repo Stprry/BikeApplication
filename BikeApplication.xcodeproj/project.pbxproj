@@ -39,6 +39,9 @@
 		7B292F2D23FF6AB300E656B1 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B292F2C23FF6AB300E656B1 /* MapViewController.swift */; };
 		7B292F3123FF6F3200E656B1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B292F3023FF6F3200E656B1 /* SettingsViewController.swift */; };
 		7B292F35240010B900E656B1 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B292F34240010B900E656B1 /* MainTabBarController.swift */; };
+		7B411E1524262AB600F7DF56 /* UserRides.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B411E1424262AB500F7DF56 /* UserRides.swift */; };
+		7B411E1724291A4900F7DF56 /* RideAnnotations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B411E1624291A4900F7DF56 /* RideAnnotations.swift */; };
+		7B411E1924291F9300F7DF56 /* RideAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B411E1824291F9300F7DF56 /* RideAnnotationView.swift */; };
 		7B5112B02406F237003D0EE7 /* RideTrack.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B5112AF2406F237003D0EE7 /* RideTrack.storyboard */; };
 		7B5112B62406F2C1003D0EE7 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5112B52406F2C1003D0EE7 /* CoreDataStack.swift */; };
 		7B5112B92406F33B003D0EE7 /* RideDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5112B82406F33B003D0EE7 /* RideDetailsViewController.swift */; };
@@ -85,6 +88,9 @@
 		7B292F2C23FF6AB300E656B1 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		7B292F3023FF6F3200E656B1 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		7B292F34240010B900E656B1 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		7B411E1424262AB500F7DF56 /* UserRides.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRides.swift; sourceTree = "<group>"; };
+		7B411E1624291A4900F7DF56 /* RideAnnotations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideAnnotations.swift; sourceTree = "<group>"; };
+		7B411E1824291F9300F7DF56 /* RideAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideAnnotationView.swift; sourceTree = "<group>"; };
 		7B5112AF2406F237003D0EE7 /* RideTrack.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RideTrack.storyboard; sourceTree = "<group>"; };
 		7B5112B52406F2C1003D0EE7 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		7B5112B82406F33B003D0EE7 /* RideDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideDetailsViewController.swift; sourceTree = "<group>"; };
@@ -216,6 +222,8 @@
 				7B292F3023FF6F3200E656B1 /* SettingsViewController.swift */,
 				7B292F34240010B900E656B1 /* MainTabBarController.swift */,
 				7B0D499324105FDC00FD5A60 /* RootViewController.swift */,
+				7B411E1624291A4900F7DF56 /* RideAnnotations.swift */,
+				7B411E1824291F9300F7DF56 /* RideAnnotationView.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -228,6 +236,7 @@
 				7B292F2523FB549300E656B1 /* Constants.swift */,
 				7BF5336E240D7BE800ECD598 /* UnitExtensions.swift */,
 				7BF53370240D7C0D00ECD598 /* FormatDisplay.swift */,
+				7B411E1424262AB500F7DF56 /* UserRides.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -390,6 +399,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B411E1724291A4900F7DF56 /* RideAnnotations.swift in Sources */,
+				7B411E1524262AB600F7DF56 /* UserRides.swift in Sources */,
 				7B0D4988240DDFBA00FD5A60 /* Photo.swift in Sources */,
 				7B5112B62406F2C1003D0EE7 /* CoreDataStack.swift in Sources */,
 				7B5112BB2406F399003D0EE7 /* NewRideViewController.swift in Sources */,
@@ -411,6 +422,7 @@
 				7B0D499424105FDC00FD5A60 /* RootViewController.swift in Sources */,
 				7B27E4B82423EC8100105E97 /* PopUpViewController.swift in Sources */,
 				7B0D499B241404CA00FD5A60 /* SnapshotExtensions.swift in Sources */,
+				7B411E1924291F9300F7DF56 /* RideAnnotationView.swift in Sources */,
 				7BF53373240D7C2F00ECD598 /* LocationManager.swift in Sources */,
 				7B292F35240010B900E656B1 /* MainTabBarController.swift in Sources */,
 				7BF53371240D7C0D00ECD598 /* FormatDisplay.swift in Sources */,
