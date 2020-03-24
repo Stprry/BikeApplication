@@ -18,6 +18,5 @@ struct UserRides: Decodable{
     let rideType: String
     let rideXCordinate : Double
     let rideYCordinate : Double
-    
 }
 
