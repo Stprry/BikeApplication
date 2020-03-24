@@ -8,22 +8,23 @@
 
 import UIKit
 import MapKit
-class RideEventViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
-    var rideAttendees:[RideAttendees] = [] // make RideAtendees class/template for the ride atendee data
+class RideEventViewController: UIViewController{
+    //,UITableViewDelegate,UITableViewDataSource
+//    var rideAttendees:[RideAttendees] = [] // make RideAtendees class/template for the ride atendee data
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // fill table view with users fetched from firebase
-        return rideAttendees.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-       let cell = tableView.dequeueReusableCell(withIdentifier: "AtendeeCell", for: indexPath)
-               let atendee = rideAttendees[indexPath.row]
-               cell.textLabel!.text = atendee.firstName
-               cell.detailTextLabel?.text = atendee.lastName
-               return cell
-    }
-    
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        // fill table view with users fetched from firebase
+//        return rideAttendees.count
+//    }
+//
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//       let cell = tableView.dequeueReusableCell(withIdentifier: "AtendeeCell", for: indexPath)
+//               let atendee = rideAttendees[indexPath.row]
+//               cell.textLabel!.text = atendee.firstName
+//               cell.detailTextLabel?.text = atendee.lastName
+//               return cell
+//    }
+    var rideCorords: CLLocationCoordinate2D?
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var rideNameLbl: UILabel!
     @IBOutlet weak var rideLeaderLbl: UILabel!
@@ -33,8 +34,9 @@ class RideEventViewController: UIViewController,UITableViewDelegate,UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print("my ride corordinates \(rideCorords)")
         // Do any additional setup after loading the view.
+        // query firebase with co-ord details to get the specific ride info
     }
     @IBAction func signUpBtnTap(_ sender: Any) {
         // create firebase atendee add atendee to the ride attendee,
