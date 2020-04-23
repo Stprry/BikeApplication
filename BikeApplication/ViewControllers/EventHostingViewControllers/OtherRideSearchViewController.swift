@@ -22,8 +22,7 @@ class OtherRideSearchViewController: UIViewController, UITableViewDelegate,UITab
     var selectUID:String?
     
     var passDelegate:PasstoHostDelegate!///delegate to host
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -34,6 +33,7 @@ class OtherRideSearchViewController: UIViewController, UITableViewDelegate,UITab
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
+    
  func getUsers(){
         let db = Firestore.firestore()
         db.collection("users").getDocuments() { (snapshot, err) in

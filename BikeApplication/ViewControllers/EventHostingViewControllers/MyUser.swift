@@ -14,5 +14,11 @@ struct MyUser: Decodable{
     let email : String
     let uid : String
 }
-
+// structure for attending users
+struct AttendingUser: Decodable{
+    let displayName : String
+    let docIDfromRide : String
+    let rideDate : String
+    let uid : String
+}
 

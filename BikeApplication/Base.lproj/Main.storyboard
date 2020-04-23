@@ -856,7 +856,7 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attendees" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pGr-bQ-z0y">
                                 <rect key="frame" x="32" y="348" width="350" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -864,7 +864,7 @@
                                 <rect key="frame" x="32" y="372.5" width="350" height="355.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="dF8-QH-vHv">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="attendCell" id="dF8-QH-vHv">
                                         <rect key="frame" x="0.0" y="28" width="350" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dF8-QH-vHv" id="jxA-kK-5Lm">
@@ -927,6 +927,7 @@
                         <outlet property="rideNameLbl" destination="LBL-fk-wbP" id="sHR-my-L4A"/>
                         <outlet property="rideTypeLbl" destination="m24-La-p8n" id="zTM-2F-Ukq"/>
                         <outlet property="signUpBtn" destination="fUX-ix-dJh" id="fD0-we-2QX"/>
+                        <outlet property="userTable" destination="ZRg-Qc-cDe" id="YTW-52-0Of"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jvk-rD-PdY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
