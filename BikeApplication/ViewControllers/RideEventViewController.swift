@@ -5,7 +5,7 @@
 //  Created by Sam Perry on 24/03/2020.
 //  Copyright © 2020 Sam Perry. All rights reserved.
 //
-
+import Firebase
 import UIKit
 import MapKit
 class RideEventViewController: UIViewController{
@@ -35,6 +35,7 @@ class RideEventViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         print("my ride corordinates \(rideCorords)")
+        fetchData()
         // Do any additional setup after loading the view.
         // query firebase with co-ord details to get the specific ride info
     }
@@ -42,4 +43,22 @@ class RideEventViewController: UIViewController{
         // create firebase atendee add atendee to the ride attendee,
     }
     
+}
+extension RideEventViewController{
+    func fetchData(){
+        let db = Firestore.firestore()
+        let dbRef = db.collection("Events")
+        dbRef
+            .whereField("rideYCordinate", isEqualTo: rideCorords?.latitude as Any)
+            .whereField("rideXCordinate", isEqualTo: rideCorords?.longitude as Any)
+             .getDocuments() { (querySnapshot, err) in
+                  if let err = err {
+                      print("Error getting documents: \(err)")
+                  } else {
+                      for document in querySnapshot!.documents {
+                          print("\(document.documentID) => \(document.data())")
+                      }
+                  }
+          }
+    }
 }

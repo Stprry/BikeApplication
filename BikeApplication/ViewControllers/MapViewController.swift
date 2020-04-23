@@ -15,7 +15,6 @@ class MapViewController: UIViewController{
     var userRides:[UserRides] = []
     
     @IBOutlet weak var HostButton: UIButton!
-    @IBOutlet weak var ViewButton: UIButton!
     @IBOutlet weak var mapView: MKMapView!
     override func viewDidLoad() {
         super.viewDidLoad()
