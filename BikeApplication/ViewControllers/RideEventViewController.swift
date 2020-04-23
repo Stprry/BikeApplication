@@ -41,6 +41,7 @@ class RideEventViewController: UIViewController,UITableViewDelegate,UITableViewD
         super.viewDidLoad()
         print("my ride corordinates \(rideCorords)")
         fetchData()
+        getUsers()
         userTable.delegate = self
         userTable.dataSource = self
         // Do any additional setup after loading the view.
@@ -74,7 +75,7 @@ class RideEventViewController: UIViewController,UITableViewDelegate,UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "attendCell", for: indexPath)
         let user = attendees[indexPath.row]
-        cell.textLabel!.text = user.displayName
+        cell.textLabel?.text = user.displayName
         return cell
     }
 }
@@ -109,6 +110,21 @@ extension RideEventViewController{
     }
     
     func getUsers(){
-        
+        let db = Firestore.firestore()
+db.collectionGroup("EventAttendees").whereField("type", isEqualTo: docID).getDocuments { (snapshot, err) in
+    if let err = err {
+            print("Error getting documents: \(err)")
+        } else {
+            let documents = snapshot!.documents
+            try! documents.forEach{document in
+                let myUser: AttendingUser = try document.decoded()
+                print(myUser.displayName)
+                //Appending the data to the array
+                self.attendees.append(myUser)
+            }
+            // Reloading your tableview AFTER the foreach
+            self.userTable.reloadData()
+            }
+        }
     }
 }
