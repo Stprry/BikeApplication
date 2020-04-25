@@ -33,10 +33,13 @@ class RideEventViewController: UIViewController,UITableViewDelegate,UITableViewD
     @IBOutlet weak var rideAttendeesLbl: UILabel!
     @IBOutlet weak var signUpBtn: UIButton!
     @IBOutlet weak var userTable: UITableView!
-
-    var attendees:[AttendingUser] = []
+   
+    let ref = Firestore.firestore().collection("EventAttendees")
+    var myUsers:[AttendingUser] = []
     var docID = ""// declare doc ID for future use for creating collection and querying that collection beacuse its uinque!
     var rideDate = ""// declare ride date for future use in Event Attendees, will be used to delete out of date rides.
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("my ride corordinates \(rideCorords)")
@@ -70,15 +73,17 @@ class RideEventViewController: UIViewController,UITableViewDelegate,UITableViewD
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        attendees.count
+        myUsers.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "attendCell", for: indexPath)
-        let user = attendees[indexPath.row]
+        let user = myUsers[indexPath.row]
         cell.textLabel?.text = user.displayName
         return cell
     }
 }
+// -MARK: loading data into the page
+
 extension RideEventViewController{
     func fetchData(){
         let db = Firestore.firestore()
@@ -91,7 +96,7 @@ extension RideEventViewController{
                       print("Error getting documents: \(err)")
                   } else {
                       for document in querySnapshot!.documents {
-                          print("\(document.documentID) => \(document.data())")// pull down all the data from the document, store it in constants
+                         // print("\(document.documentID) => \(document.data())")// pull down all the data from the document, store it in constants
                        let rideleaderAny = document.get("rideLeader")
                         let rideDateAny = document.get("rideDate")
                         _ = document.get("rideLeaderUID")
@@ -100,7 +105,6 @@ extension RideEventViewController{
                         let rideTypeAny = document.get("rideType")
                         self.rideDate = rideDateAny as! String// add rideDate our of scope to store to eventAttendees
                         self.docID = document.documentID
-// -MARK: Label asignment
                         self.rideLeaderLbl.text = (rideleaderAny as! String) // force downcast into string and assign to labels
                         self.rideNameLbl.text = "\(rideNameAny as! String) : \(rideDateAny as! String)"
                         self.rideTypeLbl.text = (rideTypeAny as! String)
@@ -108,23 +112,44 @@ extension RideEventViewController{
                   }
           }
     }
-    
+}
+// -MARK: fetching users for table
+extension RideEventViewController{
     func getUsers(){
         let db = Firestore.firestore()
-db.collectionGroup("EventAttendees").whereField("type", isEqualTo: docID).getDocuments { (snapshot, err) in
-    if let err = err {
-            print("Error getting documents: \(err)")
-        } else {
-            let documents = snapshot!.documents
-            try! documents.forEach{document in
-                let myUser: AttendingUser = try document.decoded()
-                print(myUser.displayName)
-                //Appending the data to the array
-                self.attendees.append(myUser)
-            }
-            // Reloading your tableview AFTER the foreach
-            self.userTable.reloadData()
+        let eventRef = db.collection("EventAttendees")
+        eventRef.whereField("docIDFromRide", isEqualTo: docID)
+            .getDocuments() { (querySnapshot, err) in
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                } else {
+                    for document in querySnapshot!.documents {
+                    print("\(document.documentID) => \(document.data())")
+                        let dn = document.get("displayName")
+                        let uid = document.get("uid")
+                        print("\(dn) \(uid)")
+                        let myUser: AttendingUser = try! document.decoded()
+                        self.myUsers.append(myUser)
+                    }
+                    self.userTable.reloadData()
             }
         }
     }
 }
+
+//    db.collection("EventAttendees").whereField("docIDFromRide", isEqualTo: docID).getDocuments { (snapshot, err) in
+//        if let err = err {
+//            print("Error getting documents: \(err)")
+//        } else {
+//            let documents = snapshot!.documents
+//            try! documents.forEach{document in
+//                let myUser: AttendingUser = try document.decoded()
+//                print(myUser.displayName)
+//                //Appending the data to the array
+//                self.myUsers.append(myUser)
+//            }
+//            // Reloading tableview after the foreach
+//            self.userTable.reloadData()
+//        }
+//    }
+//}

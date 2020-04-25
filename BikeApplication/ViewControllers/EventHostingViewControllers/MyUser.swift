@@ -17,7 +17,7 @@ struct MyUser: Decodable{
 // structure for attending users
 struct AttendingUser: Decodable{
     let displayName : String
-    let docIDfromRide : String
+    let docIDFromRide : String
     let rideDate : String
     let uid : String
 }
