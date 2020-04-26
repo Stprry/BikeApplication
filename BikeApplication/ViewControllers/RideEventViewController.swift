@@ -10,22 +10,9 @@ import FirebaseAuth
 import UIKit
 import MapKit
 class RideEventViewController: UIViewController,UITableViewDelegate,UITableViewDataSource{
-    //,UITableViewDelegate,UITableViewDataSource
-//    var rideAttendees:[RideAttendees] = [] // make RideAtendees class/template for the ride atendee data
-
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        // fill table view with users fetched from firebase
-//        return rideAttendees.count
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//       let cell = tableView.dequeueReusableCell(withIdentifier: "AtendeeCell", for: indexPath)
-//               let atendee = rideAttendees[indexPath.row]
-//               cell.textLabel!.text = atendee.firstName
-//               cell.detailTextLabel?.text = atendee.lastName
-//               return cell
-//    }
     var rideCorords: CLLocationCoordinate2D?
+    let db = Firestore.firestore()
+
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var rideNameLbl: UILabel!
     @IBOutlet weak var rideLeaderLbl: UILabel!
@@ -35,7 +22,7 @@ class RideEventViewController: UIViewController,UITableViewDelegate,UITableViewD
     @IBOutlet weak var userTable: UITableView!
    
     let ref = Firestore.firestore().collection("EventAttendees")
-    var myUsers:[AttendingUser] = []
+    var myUsers:[AttendingUser] = [] // declaring array
     var docID = ""// declare doc ID for future use for creating collection and querying that collection beacuse its uinque!
     var rideDate = ""// declare ride date for future use in Event Attendees, will be used to delete out of date rides.
     
@@ -44,16 +31,15 @@ class RideEventViewController: UIViewController,UITableViewDelegate,UITableViewD
         super.viewDidLoad()
         print("my ride corordinates \(rideCorords)")
         fetchData()
-        getUsers()
-        userTable.delegate = self
         userTable.dataSource = self
+        userTable.delegate = self
+        getUsers()
         // Do any additional setup after loading the view.
         // query firebase with co-ord details to get the specific ride info
     }
 // -MARK: Sign Up Btn
     @IBAction func signUpBtnTap(_ sender: Any) {
         // create firebase atendee add atendee to the ride attendee,
-        let db = Firestore.firestore()
         let user = (Auth.auth().currentUser?.displayName)!
 //        let attend = "Attendees"
 //        //db.collection("Events").document(docID).collection("Attendees").addocument("userID")
@@ -63,6 +49,7 @@ class RideEventViewController: UIViewController,UITableViewDelegate,UITableViewD
                 // error in database show error could impliment in label
                 print("Something went wrong on our servers")
             }
+            self.refresh()
         }
     }
     func refresh(){
@@ -73,7 +60,7 @@ class RideEventViewController: UIViewController,UITableViewDelegate,UITableViewD
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        myUsers.count
+        return myUsers.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "attendCell", for: indexPath)
@@ -82,8 +69,7 @@ class RideEventViewController: UIViewController,UITableViewDelegate,UITableViewD
         return cell
     }
 }
-// -MARK: loading data into the page
-
+// -MARK: loading data into the page of the ride they clicked on
 extension RideEventViewController{
     func fetchData(){
         let db = Firestore.firestore()
@@ -105,15 +91,16 @@ extension RideEventViewController{
                         let rideTypeAny = document.get("rideType")
                         self.rideDate = rideDateAny as! String// add rideDate our of scope to store to eventAttendees
                         self.docID = document.documentID
-                        self.rideLeaderLbl.text = (rideleaderAny as! String) // force downcast into string and assign to labels
+                        print(self.docID)
+                        self.rideLeaderLbl.text = "Ride leader: \(rideleaderAny as! String) "// force downcast into string and assign to labels
                         self.rideNameLbl.text = "\(rideNameAny as! String) : \(rideDateAny as! String)"
-                        self.rideTypeLbl.text = (rideTypeAny as! String)
+                        self.rideTypeLbl.text = "Ride Type: \(rideTypeAny as! String)"
                       }
                   }
           }
     }
 }
-// -MARK: fetching users for table
+// -MARK: fetching users for table  for the ride they clicked on
 extension RideEventViewController{
     func getUsers(){
         let db = Firestore.firestore()
@@ -136,20 +123,3 @@ extension RideEventViewController{
         }
     }
 }
-
-//    db.collection("EventAttendees").whereField("docIDFromRide", isEqualTo: docID).getDocuments { (snapshot, err) in
-//        if let err = err {
-//            print("Error getting documents: \(err)")
-//        } else {
-//            let documents = snapshot!.documents
-//            try! documents.forEach{document in
-//                let myUser: AttendingUser = try document.decoded()
-//                print(myUser.displayName)
-//                //Appending the data to the array
-//                self.myUsers.append(myUser)
-//            }
-//            // Reloading tableview after the foreach
-//            self.userTable.reloadData()
-//        }
-//    }
-//}

@@ -7,7 +7,6 @@
 //
 
 import UIKit
-
 import FirebaseAuth
 
 class LoginViewController: UIViewController {
@@ -15,19 +14,12 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var EmailFeild: UITextField!
     
     @IBOutlet weak var PasswordFeild: UITextField!
-    
-    
     @IBOutlet weak var LoginBtn: UIButton!
-    
     @IBOutlet weak var ErrorMsg: UILabel!
-    
-    
     @IBOutlet weak var LoginButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         frontEndSetUp()
     }
     
@@ -39,10 +31,7 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func LoginButtonTapped(_ sender: Any) {
-        
         // validate feilds still to impliment
-            
-            
             //if all feilds valid do below
             let email = EmailFeild.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let password = PasswordFeild.text!.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -61,21 +50,10 @@ class LoginViewController: UIViewController {
     }
     
     func transitionHome(){
-    
      // need to set TabView as inital VC, then Show home page
-        
-        
-    
         let tabViewController =
         storyboard?.instantiateViewController(withIdentifier: Constants.Storyboards.tabController) as? MainTabBarController
         view.window?.rootViewController = tabViewController
         view.window?.makeKeyAndVisible()
-
-        
-        
-//        let homeViewController =
-//        storyboard?.instantiateViewController(identifier: Constants.Storyboards.homeViewContrl) as? HomeViewController
-//        view.window?.rootViewController = homeViewController
-//        view.window?.makeKeyAndVisible()
     }
 }

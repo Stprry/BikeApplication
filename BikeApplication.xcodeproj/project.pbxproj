@@ -42,9 +42,6 @@
 		7B411E1524262AB600F7DF56 /* UserRides.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B411E1424262AB500F7DF56 /* UserRides.swift */; };
 		7B5112B02406F237003D0EE7 /* RideTrack.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B5112AF2406F237003D0EE7 /* RideTrack.storyboard */; };
 		7B5112B62406F2C1003D0EE7 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5112B52406F2C1003D0EE7 /* CoreDataStack.swift */; };
-		7B5112B92406F33B003D0EE7 /* RideDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5112B82406F33B003D0EE7 /* RideDetailsViewController.swift */; };
-		7B5112BB2406F399003D0EE7 /* NewRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5112BA2406F399003D0EE7 /* NewRideViewController.swift */; };
-		7B5112BD2406F3F0003D0EE7 /* RideHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5112BC2406F3F0003D0EE7 /* RideHomeViewController.swift */; };
 		7BA75356242A611000DC57BC /* RideEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA75355242A611000DC57BC /* RideEventViewController.swift */; };
 		7BF53369240D65A000ECD598 /* RiderTracker.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 7BF53368240D65A000ECD598 /* RiderTracker.xcdatamodel */; };
 		7BF5336B240D67DC00ECD598 /* StoryboardSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF5336A240D67DC00ECD598 /* StoryboardSupport.swift */; };
@@ -90,9 +87,6 @@
 		7B411E1424262AB500F7DF56 /* UserRides.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRides.swift; sourceTree = "<group>"; };
 		7B5112AF2406F237003D0EE7 /* RideTrack.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RideTrack.storyboard; sourceTree = "<group>"; };
 		7B5112B52406F2C1003D0EE7 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
-		7B5112B82406F33B003D0EE7 /* RideDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideDetailsViewController.swift; sourceTree = "<group>"; };
-		7B5112BA2406F399003D0EE7 /* NewRideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRideViewController.swift; sourceTree = "<group>"; };
-		7B5112BC2406F3F0003D0EE7 /* RideHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideHomeViewController.swift; sourceTree = "<group>"; };
 		7BA75355242A611000DC57BC /* RideEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideEventViewController.swift; sourceTree = "<group>"; };
 		7BF53368240D65A000ECD598 /* RiderTracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RiderTracker.xcdatamodel; sourceTree = "<group>"; };
 		7BF5336A240D67DC00ECD598 /* StoryboardSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardSupport.swift; sourceTree = "<group>"; };
@@ -215,7 +209,6 @@
 				7B0D499224101B5600FD5A60 /* UserControllers */,
 				7B0D498F24101AF400FD5A60 /* LoginViewControllers */,
 				7B0D4982240DDE7300FD5A60 /* PhotoViewControllers */,
-				7B5112B72406F317003D0EE7 /* RideTrackViewControllers */,
 				7B292F2C23FF6AB300E656B1 /* MapViewController.swift */,
 				7B292F3023FF6F3200E656B1 /* SettingsViewController.swift */,
 				7B292F34240010B900E656B1 /* MainTabBarController.swift */,
@@ -254,16 +247,6 @@
 				7BF53372240D7C2F00ECD598 /* LocationManager.swift */,
 			);
 			path = CoreData;
-			sourceTree = "<group>";
-		};
-		7B5112B72406F317003D0EE7 /* RideTrackViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				7B5112B82406F33B003D0EE7 /* RideDetailsViewController.swift */,
-				7B5112BA2406F399003D0EE7 /* NewRideViewController.swift */,
-				7B5112BC2406F3F0003D0EE7 /* RideHomeViewController.swift */,
-			);
-			path = RideTrackViewControllers;
 			sourceTree = "<group>";
 		};
 		E10AD855C54955DD73EF817D /* Pods */ = {
@@ -399,13 +382,10 @@
 				7B411E1524262AB600F7DF56 /* UserRides.swift in Sources */,
 				7B0D4988240DDFBA00FD5A60 /* Photo.swift in Sources */,
 				7B5112B62406F2C1003D0EE7 /* CoreDataStack.swift in Sources */,
-				7B5112BB2406F399003D0EE7 /* NewRideViewController.swift in Sources */,
 				7B292F1B23FB016900E656B1 /* LoginViewController.swift in Sources */,
 				7B0D499D241404FD00FD5A60 /* MyUser.swift in Sources */,
-				7B5112B92406F33B003D0EE7 /* RideDetailsViewController.swift in Sources */,
 				7B0D4986240DDF8500FD5A60 /* AnnotatedPhotoCell.swift in Sources */,
 				7B27E4B4241F790C00105E97 /* LocationSearchViewController.swift in Sources */,
-				7B5112BD2406F3F0003D0EE7 /* RideHomeViewController.swift in Sources */,
 				7BF53369240D65A000ECD598 /* RiderTracker.xcdatamodel in Sources */,
 				7B0D499724128A9A00FD5A60 /* HostRideViewController.swift in Sources */,
 				7B292F1923FB015A00E656B1 /* ReigsterViewController.swift in Sources */,

@@ -18,9 +18,6 @@ class PhotoViewController: UICollectionViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-//    if let patternImage = UIImage(named: "Pattern") {
-//      view.backgroundColor = UIColor(patternImage: patternImage)
-//    }
     collectionView?.backgroundColor = .clear
     collectionView?.contentInset = UIEdgeInsets(top: 23, left: 16, bottom: 10, right: 16)
   }

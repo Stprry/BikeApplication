@@ -10,7 +10,6 @@ import UIKit
 import Firebase
 import FirebaseAuth
 
-
 class HostRideViewController: UIViewController, UIPickerViewDelegate,UIPickerViewDataSource,UITextFieldDelegate {
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -44,10 +43,7 @@ class HostRideViewController: UIViewController, UIPickerViewDelegate,UIPickerVie
     @IBOutlet weak var DateFeild: UILabel!
     @IBOutlet weak var ErrorLabel: UILabel!
     
-    /* https://codewithchris.com/uipickerview-example/ */
-    ///private var ( to this clas)
-    ///
-    ///public var (to this class)
+ 
     var pickerData:[String] = [String]()///  declare new array instance to store data acessable in any method of the class
     var SelectedRideLeaderUser: MyUser?
     var selectedType:String?

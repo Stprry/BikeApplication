@@ -10,7 +10,6 @@ import UIKit
 import Foundation
 import Firebase
 
-
 protocol RiderSelectionDelegate {
     func selectedRideLeader(firstName:String,lastName:String,uid:String)
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kWf-d3-hr0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QIH-Gt-U9J">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -217,6 +217,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <accessibility key="accessibilityConfiguration" label="Page Under development"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -239,42 +240,78 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="66" translatesAutoresizingMaskIntoConstraints="NO" id="5Rr-xr-7Se">
-                                <rect key="frame" x="8" y="250" width="398" height="357"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qEd-HL-s5f">
-                                        <rect key="frame" x="0.0" y="0.0" width="398" height="69"/>
-                                        <state key="normal" title="Take Photo"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xvk-5q-peG">
-                                        <rect key="frame" x="0.0" y="135" width="398" height="30"/>
-                                        <state key="normal" title="Save Photo"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oem-Yi-5QG">
-                                        <rect key="frame" x="0.0" y="231" width="398" height="30"/>
-                                        <state key="normal" title="Download Photos"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zNQ-ta-jOQ">
-                                        <rect key="frame" x="0.0" y="327" width="398" height="30"/>
-                                        <state key="normal" title="Upload Photo"/>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RMx-dK-oAc">
-                                <rect key="frame" x="8" y="61" width="202" height="181"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xvk-5q-peG">
+                                <rect key="frame" x="8" y="278" width="398" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="aBb-tC-Fy9"/>
+                                </constraints>
+                                <state key="normal" title="Save Photo"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qEd-HL-s5f">
+                                <rect key="frame" x="8" y="335" width="398" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="zq5-Al-guQ"/>
+                                </constraints>
+                                <state key="normal" title="Take Photo"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oem-Yi-5QG">
+                                <rect key="frame" x="8" y="392" width="398" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="8CP-Qf-eJX"/>
+                                </constraints>
+                                <state key="normal" title="Download Photos"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zNQ-ta-jOQ">
+                                <rect key="frame" x="8" y="449" width="398" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="H0x-fh-xs0"/>
+                                </constraints>
+                                <state key="normal" title="Upload Photo"/>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RMx-dK-oAc">
+                                <rect key="frame" x="8" y="71" width="190" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="Txd-VJ-XGn"/>
+                                </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2G1-RW-vdw">
-                                <rect key="frame" x="218" y="61" width="188" height="181"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2G1-RW-vdw">
+                                <rect key="frame" x="206" y="71" width="200" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="5Ly-Uo-cKP"/>
+                                    <constraint firstAttribute="height" constant="180" id="8XM-yd-9kD"/>
+                                </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PAGE UNDER CONSTRUCTION" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Z1-vf-6iO">
+                                <rect key="frame" x="8" y="519" width="398" height="254"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="5Rr-xr-7Se" firstAttribute="leading" secondItem="soC-ui-DpW" secondAttribute="leading" constant="8" id="Alv-A2-IIK"/>
-                            <constraint firstItem="5Rr-xr-7Se" firstAttribute="top" secondItem="soC-ui-DpW" secondAttribute="top" constant="206" id="FWn-gI-oJN"/>
-                            <constraint firstItem="soC-ui-DpW" firstAttribute="bottom" secondItem="5Rr-xr-7Se" secondAttribute="bottom" constant="206" id="h0u-5H-SfW"/>
-                            <constraint firstItem="soC-ui-DpW" firstAttribute="trailing" secondItem="5Rr-xr-7Se" secondAttribute="trailing" constant="8" id="zSm-wT-ZrS"/>
+                            <constraint firstItem="2Z1-vf-6iO" firstAttribute="leading" secondItem="soC-ui-DpW" secondAttribute="leading" constant="8" id="1bV-vm-OkV"/>
+                            <constraint firstItem="xvk-5q-peG" firstAttribute="top" secondItem="RMx-dK-oAc" secondAttribute="bottom" constant="27" id="2fi-Oe-zbf"/>
+                            <constraint firstItem="2Z1-vf-6iO" firstAttribute="top" secondItem="zNQ-ta-jOQ" secondAttribute="bottom" constant="40" id="Cgb-7z-Xuy"/>
+                            <constraint firstItem="soC-ui-DpW" firstAttribute="bottom" secondItem="2Z1-vf-6iO" secondAttribute="bottom" constant="40" id="Ese-tA-KjT"/>
+                            <constraint firstItem="qEd-HL-s5f" firstAttribute="leading" secondItem="soC-ui-DpW" secondAttribute="leading" constant="8" id="I65-2J-Jxc"/>
+                            <constraint firstItem="2G1-RW-vdw" firstAttribute="leading" secondItem="RMx-dK-oAc" secondAttribute="trailing" constant="8" id="J6H-Fg-ybh"/>
+                            <constraint firstItem="Oem-Yi-5QG" firstAttribute="top" secondItem="qEd-HL-s5f" secondAttribute="bottom" constant="27" id="Kzy-v8-rIr"/>
+                            <constraint firstItem="soC-ui-DpW" firstAttribute="trailing" secondItem="2G1-RW-vdw" secondAttribute="trailing" constant="8" id="Qkq-eQ-jyr"/>
+                            <constraint firstItem="zNQ-ta-jOQ" firstAttribute="top" secondItem="Oem-Yi-5QG" secondAttribute="bottom" constant="27" id="R0l-Ed-SfE"/>
+                            <constraint firstItem="2G1-RW-vdw" firstAttribute="top" secondItem="soC-ui-DpW" secondAttribute="top" constant="27" id="UQW-jL-3I8"/>
+                            <constraint firstItem="RMx-dK-oAc" firstAttribute="top" secondItem="soC-ui-DpW" secondAttribute="top" constant="27" id="Ves-2k-xct"/>
+                            <constraint firstItem="soC-ui-DpW" firstAttribute="trailing" secondItem="qEd-HL-s5f" secondAttribute="trailing" constant="8" id="Yom-a1-3Et"/>
+                            <constraint firstItem="RMx-dK-oAc" firstAttribute="leading" secondItem="soC-ui-DpW" secondAttribute="leading" constant="8" id="aKD-GK-PHg"/>
+                            <constraint firstItem="soC-ui-DpW" firstAttribute="trailing" secondItem="Oem-Yi-5QG" secondAttribute="trailing" constant="8" id="ba9-ql-x5O"/>
+                            <constraint firstItem="xvk-5q-peG" firstAttribute="leading" secondItem="soC-ui-DpW" secondAttribute="leading" constant="8" id="dUJ-4G-y6R"/>
+                            <constraint firstItem="soC-ui-DpW" firstAttribute="trailing" secondItem="xvk-5q-peG" secondAttribute="trailing" constant="8" id="eEK-VC-d0O"/>
+                            <constraint firstItem="zNQ-ta-jOQ" firstAttribute="leading" secondItem="soC-ui-DpW" secondAttribute="leading" constant="8" id="fFO-e1-8pB"/>
+                            <constraint firstItem="qEd-HL-s5f" firstAttribute="top" secondItem="xvk-5q-peG" secondAttribute="bottom" constant="27" id="h5i-aP-vB0"/>
+                            <constraint firstItem="soC-ui-DpW" firstAttribute="trailing" secondItem="2Z1-vf-6iO" secondAttribute="trailing" constant="8" id="ifP-Nu-1PO"/>
+                            <constraint firstItem="soC-ui-DpW" firstAttribute="trailing" secondItem="zNQ-ta-jOQ" secondAttribute="trailing" constant="8" id="qvN-FR-GCl"/>
+                            <constraint firstItem="Oem-Yi-5QG" firstAttribute="leading" secondItem="soC-ui-DpW" secondAttribute="leading" constant="8" id="t4D-zR-132"/>
+                            <constraint firstItem="2G1-RW-vdw" firstAttribute="top" secondItem="soC-ui-DpW" secondAttribute="top" constant="27" id="wGz-Dy-fdE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="soC-ui-DpW"/>
                     </view>
@@ -1016,7 +1053,6 @@
                     <connections>
                         <segue destination="WmL-GR-AEM" kind="relationship" relationship="viewControllers" id="bWe-HP-THI"/>
                         <segue destination="kWf-d3-hr0" kind="relationship" relationship="viewControllers" id="xHQ-WZ-6gl"/>
-                        <segue destination="FtC-P9-J9D" kind="relationship" relationship="viewControllers" id="Io8-Ip-QCq"/>
                         <segue destination="8t8-em-Oqh" kind="relationship" relationship="viewControllers" id="gvJ-M8-tea"/>
                         <segue destination="ipQ-XS-QDM" kind="relationship" relationship="viewControllers" id="ZCa-ub-cKA"/>
                     </connections>

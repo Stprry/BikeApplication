@@ -12,13 +12,10 @@ import AVKit
 class ViewController: UIViewController {
 
     var videoPlayer:AVPlayer?
-       
     var videoPlayerLayer:AVPlayerLayer?
     
     @IBOutlet weak var RegisterBtn: UIButton!
-    
     @IBOutlet weak var LoginBtn: UIButton!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +35,6 @@ class ViewController: UIViewController {
     }
     
      func setUpVideo() {
-          
           // Get the path to the resource in the bundle
           let bundlePath = Bundle.main.path(forResource: "bike", ofType: "mp4")
           
